@@ -1,35 +1,41 @@
-name: Generate Amazon Product Comparison Video
+name: build-and-deploy
 
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'  # Run every hour on the hour
+  workflow_dispatch:  # Allow manual trigger
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Grant write access for pushing changes
 
     steps:
-      - name: 📥 Checkout repo
-        uses: actions/checkout@v3
-
-      - name: 🐍 Set up Python
-        uses: actions/setup-python@v4
+      - name: Checkout Code
+        uses: actions/checkout@v4
         with:
-          python-version: '3.10'
+          token: ${{ secrets.GITHUB_TOKEN }}  # Use for authentication
 
-      - name: 🧪 Install dependencies
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install --upgrade openai
-          pip install -r requirements.txt
+          pip install jinja2 feedparser arxiv google-generativeai tldextract beautifulsoup4
 
-      - name: 🧱 Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg imagemagick
-
-      - name: ⚙️ Run automation script
+      - name: Run script to generate HTML
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python curation.py
+
+      - name: Commit and push if it changed
         run: |
-          python scripts/automate.py
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "actions@github.com"
+          git add index.html || echo "No file to add"
+          git commit -m "Update index.html with latest AI news" || echo "No changes to commit"
+          git push || echo "No changes to push"
