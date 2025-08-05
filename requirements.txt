@@ -6,4 +6,4 @@ jinja2
 tldextract
 bs4
 requests  # New for timeouts
-openai>=1.2.0
+openai>=1.0.0
