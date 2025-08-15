@@ -1,397 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Daily AI news aggregated from top sources, featuring sensational headlines and breakthroughs in artificial intelligence.">
-    <meta name="keywords" content="AI news, artificial intelligence, AI report, machine learning, tech news">
-    <title>Exhaustive AI</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QVFJX51QK"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-5QVFJX51QK');
-    </script>
-
-    <!-- JSON-LD for the top story -->
-    {% if main_headline %}
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": "{{ main_headline.headline }}",
-      "image": "{{ main_headline.related_image_url or 'https://via.placeholder.com/600x300?text=AI+Headline+Image' }}",
-      "datePublished": "{{ main_headline.published }}",
-      "author": { "@type": "Organization", "name": "Exhaustive AI" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Exhaustive AI",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://raw.githubusercontent.com/Rut304/Operation_AI_News/d058fd91cc84d63a2c40991bb05955b960c23818/image%20(4).jpg"
-        }
-      }
-    }
-    </script>
-    {% endif %}
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --bg-color: #121212;
-            --text-color: #e0e0e0;
-            --link-color: #e0e0e0;
-            --hover-color: #ffffff;
-            --border-color: #333;
-            --headline-color: #e0e0e0;
-            --source-color: #999999;
-            --title-color: #eca213;
-
-            /* Card tones */
-            --card-bg: #161616;
-            --card-border: #2a2a2a;
-            --card-shadow: 0 1px 0 rgba(0,0,0,0.25);
-            --card-shadow-hover: 0 6px 20px rgba(0,0,0,0.25);
-        }
-
-        /* Light mode */
-        @media (prefers-color-scheme: light) {
-            :root {
-                --bg-color: #fff;
-                --text-color: #000;
-                --link-color: #000;
-                --hover-color: #0000ff;
-                --border-color: #ccc;
-                --headline-color: #333;
-                --source-color: #666;
-                --title-color: #eca213;
-
-                --card-bg: #fff;
-                --card-border: #e6e6e6;
-                --card-shadow: 0 1px 0 rgba(0,0,0,0.06);
-                --card-shadow-hover: 0 8px 24px rgba(0,0,0,0.08);
-            }
-        }
-
-        /* Base */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-        }
-
-        header { text-align: center; margin-bottom: 28px; }
-        .logo { max-width: 200px; height: auto; }
-
-        h1 {
-            color: var(--title-color);
-            font-size: 3.6em;
-            text-align: center;
-            margin: 0 0 6px 0;
-        }
-
-        /* Top (main) story as a larger card */
-        .main-article {
-            max-width: 980px;
-            margin: 0 auto 36px auto;
-        }
-        .main-card {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 12px;
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            background: var(--card-bg);
-            box-shadow: var(--card-shadow);
-            padding: 16px;
-            transition: box-shadow .15s ease, transform .05s ease;
-            text-align: left;
-        }
-        .main-card:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-1px); }
-
-        .main-headline {
-            font-size: 2.2em;
-            color: var(--headline-color);
-            margin: 0;
-            text-decoration: none;
-            font-weight: 800;
-            line-height: 1.15;
-        }
-        .main-headline a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; }
-
-        .meta {
-            color: var(--source-color);
-            font-size: 0.9em;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .meta .dot { opacity: .5; }
-
-        .main-image {
-            width: 100%;
-            max-height: 340px;
-            overflow: hidden;
-            border-radius: 10px;
-            background: #0d0d0d;
-        }
-        .main-image img { width: 100%; height: auto; display: block; object-fit: cover; }
-
-        /* Columns */
-        .columns {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
-        }
-        @media (min-width: 992px) {
-            .columns {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 18px;
-            }
-        }
-
-        .column { display: grid; gap: 12px; }
-
-        /* Headline cards (WSJ-style boxes) */
-        .headline-card {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
-            border: 1px solid var(--card-border);
-            border-radius: 10px;
-            padding: 12px;
-            background: var(--card-bg);
-            box-shadow: var(--card-shadow);
-            transition: box-shadow .15s ease, transform .05s ease;
-        }
-        .headline-card:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-1px); }
-
-        /* Optional thumbnails (kept small to preserve thin cards) */
-        .thumb {
-            display: block;
-            width: 100%;
-            max-height: 140px;
-            overflow: hidden;
-            border-radius: 8px;
-            background: #0d0d0d;
-        }
-        .thumb img { width: 100%; height: auto; display: block; object-fit: cover; }
-
-        .headline {
-            font-size: 1.1em;
-            color: var(--headline-color);
-            margin: 0;
-            font-weight: 800;
-            line-height: 1.25;
-        }
-        .headline a { color: inherit; text-decoration: underline; text-underline-offset: 1px; }
-
-        .source {
-            font-style: italic;
-            font-size: 0.9em;
-            color: var(--source-color);
-        }
-
-        /* Your existing random styles still apply */
-        .style1 { font-weight: bold; color: var(--headline-color); }
-        .style2 { font-style: italic; color: var(--headline-color); }
-        .style3 { font-weight: bold; font-size: 1.2em; color: var(--headline-color); }
-        .style4 { color: var(--headline-color); }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 0.8em;
-            color: var(--source-color);
-        }
-        footer ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        footer li { flex-basis: 20%; min-width: 150px; }
-        footer a { color: var(--link-color); text-decoration: underline; }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.4em; }
-            .main-headline { font-size: 1.6em; }
-            .headline { font-size: 1em; }
-            .main-image { max-height: 260px; }
-        }
-    </style>
-</head>
-<body>
-<header>
-    <h1>Exhaustive AI</h1>
-</header>
-
-{% if main_headline %}
-<section class="main-article">
-    <article class="main-card">
-        <h2 class="main-headline {{ main_headline.style }}">
-            <a href="{{ main_headline.url }}" target="_blank" rel="noopener noreferrer">
-                {{ main_headline.headline }}
-            </a>
-        </h2>
-        <div class="meta">
-            <span class="source">{{ main_headline.source }}</span>
-            <span class="dot">•</span>
-            <time datetime="{{ main_headline.published }}">{{ main_headline.published[:10] }}</time>
-        </div>
-        {% if main_headline.image_url %}
-        <a class="main-image" href="{{ main_headline.url }}" target="_blank" rel="noopener noreferrer">
-            <img src="{{ main_headline.image_url }}" alt="Main article image for {{ main_headline.headline }}">
-        </a>
-        {% endif %}
-    </article>
-</section>
-{% endif %}
-
-<div class="columns">
-    <!-- Column 1 -->
-    <div class="column">
-        {% for item in column1 %}
-        {% set show_image = (loop.index % 2 == 0) and item.image_url %}
-        <article class="headline-card">
-            {% if show_image %}
-            <a href="{{ item.url }}" class="thumb" target="_blank" rel="noopener">
-                <img src="{{ item.image_url }}" alt="Article image for {{ item.headline }}">
-            </a>
-            {% endif %}
-            <h3 class="headline {{ item.style }}">
-                <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
-                    {{ item.headline }}
-                </a>
-            </h3>
-            <div class="meta">
-                <span class="source">{{ item.source }}</span>
-                <span class="dot">•</span>
-                <time datetime="{{ item.published }}">{{ item.published[:10] }}</time>
-            </div>
-        </article>
-        {% endfor %}
-    </div>
-
-    <!-- Column 2 -->
-    <div class="column">
-        {% for item in column2 %}
-        {% set show_image = (loop.index % 2 == 0) and item.image_url %}
-        <article class="headline-card">
-            {% if show_image %}
-            <a href="{{ item.url }}" class="thumb" target="_blank" rel="noopener">
-                <img src="{{ item.image_url }}" alt="Article image for {{ item.headline }}">
-            </a>
-            {% endif %}
-            <h3 class="headline {{ item.style }}">
-                <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
-                    {{ item.headline }}
-                </a>
-            </h3>
-            <div class="meta">
-                <span class="source">{{ item.source }}</span>
-                <span class="dot">•</span>
-                <time datetime="{{ item.published }}">{{ item.published[:10] }}</time>
-            </div>
-        </article>
-        {% endfor %}
-    </div>
-
-    <!-- Column 3 -->
-    <div class="column">
-        {% for item in column3 %}
-        {% set show_image = (loop.index % 2 == 0) and item.image_url %}
-        <article class="headline-card">
-            {% if show_image %}
-            <a href="{{ item.url }}" class="thumb" target="_blank" rel="noopener">
-                <img src="{{ item.image_url }}" alt="Article image for {{ item.headline }}">
-            </a>
-            {% endif %}
-            <h3 class="headline {{ item.style }}">
-                <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
-                    {{ item.headline }}
-                </a>
-            </h3>
-            <div class="meta">
-                <span class="source">{{ item.source }}</span>
-                <span class="dot">•</span>
-                <time datetime="{{ item.published }}">{{ item.published[:10] }}</time>
-            </div>
-        </article>
-        {% endfor %}
-    </div>
-</div>
 <footer>
-  &copy; {{ current_year }} Exhaustive AI. All rights reserved.
-  <a href="mailto:ExhaustiveAI@gmail.com">Contact Us</a>
+  <hr style="margin:36px 0;border:0;border-top:1px solid var(--border-color);opacity:.7">
+  <h2 style="text-align:center;margin:0 0 8px 0;">BEST AI NEWS SITES — NOT4EVA</h2>
+  <p style="text-align:center;color:var(--source-color);margin:0 0 16px 0;">
+    Curated, free/accessible AI business destinations
+  </p>
 
-  <h2>Top 30 AI Business Destinations (Free/Accessible)</h2>
-  <div style="display:grid;gap:18px;grid-template-columns:1fr;max-width:1200px;margin:16px auto 0;">
+  <div class="footer-cols" style="display:grid;gap:18px;grid-template-columns:1fr;max-width:1200px;margin:0 auto;">
     <style>
-      @media (min-width: 900px) {
-        .footer-cols { grid-template-columns: repeat(3, 1fr) !important; }
-      }
-      footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+      @media (min-width: 900px) { .footer-cols { grid-template-columns: repeat(3, 1fr) !important; } }
+      footer ul { list-style:none; padding:0; margin:0; display:grid; gap:10px; }
       footer li a { color: var(--link-color); text-decoration: underline; }
     </style>
 
-    <div class="footer-cols" style="display:grid;gap:18px;grid-template-columns:1fr;">
-      <!-- Column 1: Daily Destinations & Aggregators -->
+    {% set links = footer_links if footer_links is defined and footer_links else [] %}
+    {% if links %}
+      {% set col_size = (links|length // 3) + (1 if (links|length % 3)>0 else 0) %}
+      {% for col in range(3) %}
       <ul>
-        <li><a href="https://www.techmeme.com/" target="_blank" rel="noopener noreferrer">Techmeme (AI/Tech)</a></li>
-        <li><a href="https://www.reuters.com/technology/artificial-intelligence/" target="_blank" rel="noopener noreferrer">Reuters – AI</a></li>
-        <li><a href="https://www.cnbc.com/technology/" target="_blank" rel="noopener noreferrer">CNBC – Technology</a></li>
-        <li><a href="https://news.yahoo.com/tagged/ai/" target="_blank" rel="noopener noreferrer">Yahoo Finance – AI</a></li>
-        <li><a href="https://www.theverge.com/artificial-intelligence" target="_blank" rel="noopener noreferrer">The Verge – AI</a></li>
-        <li><a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank" rel="noopener noreferrer">TechCrunch – AI</a></li>
-        <li><a href="https://venturebeat.com/category/ai/" target="_blank" rel="noopener noreferrer">VentureBeat – AI</a></li>
-        <li><a href="https://arstechnica.com/tag/ai/" target="_blank" rel="noopener noreferrer">Ars Technica – AI</a></li>
-        <li><a href="https://www.engadget.com/tag/ai/" target="_blank" rel="noopener noreferrer">Engadget – AI</a></li>
-        <li><a href="https://www.axios.com/technology" target="_blank" rel="noopener noreferrer">Axios – Tech & AI</a></li>
+        {% for item in links[col*col_size:(col+1)*col_size] %}
+          <li><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a></li>
+        {% endfor %}
       </ul>
-
-      <!-- Column 2: Enterprise/IT & Analysis (free-first) -->
+      {% endfor %}
+    {% else %}
+      <!-- Fallback to a strong static 30 if no footer_links passed -->
       <ul>
-        <li><a href="https://www.theregister.com/tags/ai/" target="_blank" rel="noopener noreferrer">The Register – AI</a></li>
+        <li><a href="https://www.reuters.com/technology/artificial-intelligence/" target="_blank" rel="noopener noreferrer">Reuters – AI</a></li>
+        <li><a href="https://www.axios.com/technology/automation-and-ai" target="_blank" rel="noopener noreferrer">Axios – AI</a></li>
+        <li><a href="https://www.cnbc.com/technology/" target="_blank" rel="noopener noreferrer">CNBC – Tech</a></li>
+        <li><a href="https://techmeme.com/" target="_blank" rel="noopener noreferrer">Techmeme</a></li>
+        <li><a href="https://venturebeat.com/category/ai/" target="_blank" rel="noopener noreferrer">VentureBeat – AI</a></li>
+        <li><a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank" rel="noopener noreferrer">TechCrunch – AI</a></li>
+        <li><a href="https://www.theverge.com/ai-artificial-intelligence" target="_blank" rel="noopener noreferrer">The Verge – AI</a></li>
         <li><a href="https://www.zdnet.com/topic/artificial-intelligence/" target="_blank" rel="noopener noreferrer">ZDNet – AI</a></li>
-        <li><a href="https://www.infoworld.com/category/artificial-intelligence/" target="_blank" rel="noopener noreferrer">InfoWorld – AI</a></li>
+        <li><a href="https://www.theregister.com/Tag/AI/" target="_blank" rel="noopener noreferrer">The Register – AI</a></li>
+        <li><a href="https://www.infoworld.com/artificial-intelligence/" target="_blank" rel="noopener noreferrer">InfoWorld – AI</a></li>
+      </ul>
+      <ul>
         <li><a href="https://www.eweek.com/artificial-intelligence/" target="_blank" rel="noopener noreferrer">eWeek – AI</a></li>
-        <li><a href="https://www.enterpriseai.news/" target="_blank" rel="noopener noreferrer">EnterpriseAI</a></li>
+        <li><a href="https://www.engadget.com/tag/ai/" target="_blank" rel="noopener noreferrer">Engadget – AI</a></li>
         <li><a href="https://www.tomshardware.com/t/ai/" target="_blank" rel="noopener noreferrer">Tom’s Hardware – AI</a></li>
-        <li><a href="https://www.fastcompany.com/section/artificial-intelligence" target="_blank" rel="noopener noreferrer">Fast Company – AI</a></li>
-        <li><a href="https://www.forbes.com/ai/" target="_blank" rel="noopener noreferrer">Forbes – AI</a></li>
-        <li><a href="https://news.mit.edu/topic/artificial-intelligence2" target="_blank" rel="noopener noreferrer">MIT News – AI</a></li>
+        <li><a href="https://siliconangle.com/tag/ai/" target="_blank" rel="noopener noreferrer">SiliconANGLE – AI</a></li>
+        <li><a href="https://www.nextplatform.com/category/machine-learning/" target="_blank" rel="noopener noreferrer">The Next Platform – AI/HPC</a></li>
+        <li><a href="https://www.datacenterdynamics.com/en/ai/" target="_blank" rel="noopener noreferrer">DatacenterDynamics – AI</a></li>
+        <li><a href="https://www.hpcwire.com/tag/ai/" target="_blank" rel="noopener noreferrer">HPCwire – AI</a></li>
+        <li><a href="https://www.servethehome.com/tag/ai/" target="_blank" rel="noopener noreferrer">ServeTheHome – AI</a></li>
+        <li><a href="https://www.artificialintelligence-news.com/" target="_blank" rel="noopener noreferrer">AI News (industry)</a></li>
         <li><a href="https://aibusiness.com/" target="_blank" rel="noopener noreferrer">AI Business</a></li>
       </ul>
-
-      <!-- Column 3: Official Newsrooms & Research (always free) -->
       <ul>
+        <li><a href="https://dailyai.com/" target="_blank" rel="noopener noreferrer">DailyAI</a></li>
+        <li><a href="https://www.marktechpost.com/" target="_blank" rel="noopener noreferrer">MarkTechPost</a></li>
+        <li><a href="https://the-decoder.com/" target="_blank" rel="noopener noreferrer">The Decoder</a></li>
+        <li><a href="https://www.unite.ai/" target="_blank" rel="noopener noreferrer">Unite.AI</a></li>
         <li><a href="https://openai.com/blog" target="_blank" rel="noopener noreferrer">OpenAI Blog</a></li>
         <li><a href="https://ai.googleblog.com/" target="_blank" rel="noopener noreferrer">Google AI Blog</a></li>
         <li><a href="https://blogs.microsoft.com/" target="_blank" rel="noopener noreferrer">Microsoft Blog</a></li>
         <li><a href="https://aws.amazon.com/blogs/aws/category/artificial-intelligence/" target="_blank" rel="noopener noreferrer">AWS – AI Blog</a></li>
-        <li><a href="https://nvidianews.nvidia.com/" target="_blank" rel="noopener noreferrer">NVIDIA Newsroom</a></li>
-        <li><a href="https://ai.facebook.com/blog/" target="_blank" rel="noopener noreferrer">Meta AI Blog</a></li>
+        <li><a href="https://blogs.nvidia.com/" target="_blank" rel="noopener noreferrer">NVIDIA News/Blog</a></li>
         <li><a href="https://research.ibm.com/blog" target="_blank" rel="noopener noreferrer">IBM Research Blog</a></li>
-        <li><a href="https://www.salesforce.com/news/" target="_blank" rel="noopener noreferrer">Salesforce News</a></li>
-        <li><a href="https://www.oracle.com/news/" target="_blank" rel="noopener noreferrer">Oracle News</a></li>
-        <li><a href="https://www.adobe.com/blog" target="_blank" rel="noopener noreferrer">Adobe Blog</a></li>
       </ul>
-    </div>
+    {% endif %}
   </div>
+
+  <p style="text-align:center;margin:20px 0 0 0;color:var(--source-color);font-size:.85em;">
+    &copy; {{ current_year }} Exhaustive AI. <a href="mailto:ExhaustiveAI@gmail.com">Contact Us</a>
+  </p>
 </footer>
-</body>
-</html>
