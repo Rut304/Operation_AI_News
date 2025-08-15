@@ -1,420 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Daily AI news aggregated from top sources, featuring sensational headlines and breakthroughs in artificial intelligence.">
-    <meta name="keywords" content="AI news, artificial intelligence, AI report, machine learning, tech news">
-    <title>Exhaustive AI</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5QVFJX51QK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-5QVFJX51QK');
-</script>
-
-<!-- Add JSON-LD schema here -->
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "Most Read: Google Launches AI ‘Guided Learning’ Tool to Teach Users; Dell Tackles Unstructured Data for Generative AI Applications",
-  "image": "https://source.unsplash.com/600x300/?ai,technology",
-  "datePublished": "2025-08-14T17:32:29+00:00",
-  "author": {
-    "@type": "Organization",
-    "name": "Exhaustive AI"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Exhaustive AI",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://raw.githubusercontent.com/Rut304/Operation_AI_News/d058fd91cc84d63a2c40991bb05955b960c23818/image%20(4).jpg"
-    }
-  }
-}
-</script>
-
-
-<!-- Load Roboto font -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
-    :root {
-        --bg-color: #121212; /* Dark gray background default */
-        --text-color: #e0e0e0; /* Light gray text */
-        --link-color: #e0e0e0; /* Light grey links */
-        --hover-color: #ffffff; /* White on hover */
-        --border-color: #333; /* Dark borders */
-        --headline-color: #e0e0e0; /* Light grey headlines */
-        --source-color: #999999; /* Grey for source text */
-        --title-color: #eca213; /* Warm gold-orange for title */
-    }
-    
-    /* Light mode override */
-    @media (prefers-color-scheme: light) {
-        :root {
-            --bg-color: #fff;
-            --text-color: #000;
-            --link-color: #000;
-            --hover-color: #0000ff;
-            --border-color: #ccc;
-            --headline-color: #333; /* Dark grey in light mode */
-            --source-color: #666; /* Darker grey for sources in light mode */
-            --title-color: #eca213; /* Keep warm gold-orange */
-        }
-    }
-    
-    body {
-        font-family: 'Roboto', sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        margin: 0;
-        padding: 20px;
-        line-height: 1.6;
-    }
-    
-    header {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    
-    .logo {
-        max-width: 200px;
-        height: auto;
-    }
-    
-    h1 {
-        color: var(--title-color);
-        font-size: 5em; /* Even larger for title */
-        text-align: center; /* Ensure centered */
-    }
-    
-    .main-article {
-        text-align: center; /* Center the top headline section */
-        margin-bottom: 60px; /* Increased space between main headline and columns */
-    }
-    
-    .main-headline {
-        font-size: 4em; /* Even larger for top headline */
-        color: var(--headline-color);
-        text-decoration: underline;
-        margin-bottom: 10px;
-    }
-    
-    .headline {
-        font-size: 1.4em;
-        color: var(--headline-color);
-        text-decoration: underline;
-        margin-bottom: 10px; /* Increased for better spacing */
-        display: block; /* Ensures full line */
-    }
-    
-    .source {
-        font-style: italic;
-        font-size: 0.9em;
-        color: var(--source-color);
-        margin-bottom: 15px; /* Added for separation */
-        display: block;
-    }
-    
-    a {
-        color: var(--link-color);
-        text-decoration: none;
-    }
-    
-    a:hover {
-        color: var(--hover-color);
-    }
-    
-    .columns {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .column {
-        width: 30%;
-        padding: 10px;
-        border-right: 1px solid var(--border-color);
-    }
-    
-    .column:last-child {
-        border-right: none;
-    }
-    
-    img {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 15px; /* Increased */
-    }
-    
-    .article-item {
-        margin-bottom: 20px; /* Wrapper for each article to prevent scrunching */
-    }
-    
-    footer {
-        text-align: center;
-        margin-top: 40px;
-        font-size: 0.8em;
-        color: var(--source-color);
-    }
-    
-    footer ul {
-        list-style-type: none; /* Remove bullets for clean look */
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px; /* Space between items */
-    }
-    
-    footer li {
-        flex-basis: 20%; /* Approximate for 5 columns on wide screens */
-        min-width: 150px; /* Prevent too narrow */
-    }
-    
-    footer a {
-        color: var(--link-color);
-        text-decoration: underline;
-    }
-    
-    /* New: Define random styles for variety (Drudge-like flair) */
-    .style1 {
-        font-weight: bold;
-        text-transform: none; /* No uppercase */
-        color: var(--headline-color); /* Same light grey */
-    }
-    .style2 {
-        font-style: italic;
-        color: var(--headline-color); /* Same light grey */
-    }
-    .style3 {
-        font-weight: bold;
-        font-size: 1.5em; /* Slightly larger */
-        color: var(--headline-color); /* Same light grey */
-    }
-    .style4 {
-        color: var(--headline-color); /* Same light grey */
-    }
-
-    /* Mobile responsiveness */
-    @media (max-width: 768px) {
-        .columns {
-            flex-direction: column; /* Stack columns vertically on mobile */
-        }
-        
-        .column {
-            width: 100%; /* Full width on mobile */
-            border-right: none; /* Remove borders */
-            border-bottom: 1px solid var(--border-color); /* Optional separator */
-            padding: 10px 0;
-        }
-        
-        .column:last-child {
-            border-bottom: none;
-        }
-        
-        h1 {
-            font-size: 2.5em; /* Reduced title on mobile */
-        }
-        
-        .main-headline {
-            font-size: 2em; /* Reduced main headline on mobile, but larger than column headlines */
-        }
-        
-        .headline {
-            font-size: 1.1em; /* Smaller headlines on mobile */
-        }
-        
-        footer ul {
-            flex-direction: column; /* Stack footer list on mobile */
-            gap: 10px;
-        }
-        
-        footer li {
-            flex-basis: auto;
-            min-width: auto;
-        }
-    }
-</style></head>
-<body>
-    <header>
-        <h1>Exhaustive AI</h1>
-    </header>
-    
-
-<section class="main-article">
-    <a href="https://aibusiness.com/nlp/most-read-google-launches-ai-guided-learning-tool-to-teach-users-dell-tackles-unstructured-data-for-generative-ai-applications" class="main-headline style2" target="_blank" rel="noopener noreferrer">Most Read: Google Launches AI ‘Guided Learning’ Tool to Teach Users; Dell Tackles Unstructured Data for Generative AI Applications </a>
-    <span class="source">(Aibusiness)</span>
-    
-    <img src="https://eu-images.contentstack.com/v3/assets/blt6b0f74e5591baa03/blt8ac1376de37d4523/689b572944153b25c2bd305b/Google_AI_guided_learning.jpg?width=1280&auto=webp&quality=80&disable=upscale" alt="Main article image for Most Read: Google Launches AI ‘Guided Learning’ Tool to Teach Users; Dell Tackles Unstructured Data for Generative AI Applications">
-    
-</section>
-
-
-<div class="columns">
-    <div class="column">
-        
-        <div class="article-item">
-            <a href="http://arxiv.org/abs/2508.09987v1" class="headline style1" target="_blank" rel="noopener noreferrer">GPT-4o's Secret Weapon: Synthetic Images That Will Blow Your Mind! </a>
-            <span class="source">(arXiv)</span>
-            
-        </div>
-        
-        <div class="article-item">
-            <a href="https://techcrunch.com/2025/08/14/cohere-hits-a-6-8b-valuation-as-investors-amd-nvidia-and-salesforce-double-down/" class="headline style1" target="_blank" rel="noopener noreferrer">Cohere hits a $6.8B valuation as investors AMD, Nvidia, and Salesforce double down </a>
-            <span class="source">(TechCrunch)</span>
-            
-        </div>
-        
-        <div class="article-item">
-            <a href="https://www.infoworld.com/article/4039243/wassette-a-bridge-between-wasm-and-mcp.html" class="headline style2" target="_blank" rel="noopener noreferrer">Wassette: A bridge between Wasm and MCP </a>
-            <span class="source">(Infoworld)</span>
-            
-            <img src="https://www.infoworld.com/wp-content/uploads/2025/08/4039243-0-69891600-1755162118-shutterstock_2248315255-100947624-orig.jpg?quality=50&strip=all" alt="Article image for Wassette: A bridge between Wasm and MCP">
-            
-        </div>
-        
-        <div class="article-item">
-            <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-models-automated-reasoning-checks-amazon-evs-and-more-august-11-2025/" class="headline style2" target="_blank" rel="noopener noreferrer">AWS Weekly Roundup: OpenAI models, Automated Reasoning checks, Amazon EVS, and more (August 11, 2025) </a>
-            <span class="source">(Amazon)</span>
-            
-        </div>
-        
-        <div class="article-item">
-            <a href="https://dailyai.com/2025/05/pope-leo-xiv-declares-ai-a-threat-to-human-dignity-and-workers-rights/" class="headline style2" target="_blank" rel="noopener noreferrer">Pope Leo XIV Declares AI a Threat to Human Dignity and Workers’ Rights </a>
-            <span class="source">(DailyAI)</span>
-            
-        </div>
-        
-        <div class="article-item">
-            <a href="https://www.marktechpost.com/2025/08/14/guardrails-ai-introduces-snowglobe-the-simulation-engine-for-ai-agents-and-chatbots/" class="headline style2" target="_blank" rel="noopener noreferrer">Guardrails AI Introduces Snowglobe: The Simulation Engine for AI Agents and Chatbots </a>
-            <span class="source">(MarkTechPost)</span>
-            
-        </div>
-        
-    </div>
-    
-    <div class="column">
-        
-        <div class="article-item">
-            <a href="https://www.analyticsvidhya.com/blog/2025/08/automate-whatsapp-business-queries-using-n8n/" class="headline style2" target="_blank" rel="noopener noreferrer">How to Automate Your WhatsApp Business Queries Using n8n </a>
-            <span class="source">(Analytics Vidhya)</span>
-            
-            <img src="https://www.youtube.com/embed/NNL0Pop704o" alt="Article image for How to Automate Your WhatsApp Business Queries Using n8n">
-            
-        </div>
-        
-        <div class="article-item">
-            <a href="https://www.infoworld.com/article/4037663/monitoring-microservices-best-practices-for-robust-systems.html" class="headline style1" target="_blank" rel="noopener noreferrer">Monitoring microservices: Best practices for robust systems </a>
-            <span class="source">(Infoworld)</span>
-            
-            <img src="https://www.infoworld.com/wp-content/uploads/2025/08/4037663-0-07428400-1755162080-microservices_minitature_figurines_service_repair_circuit_board_thinkstock_87524273-100624778-orig.jpg?quality=50&strip=all" alt="Article image for Monitoring microservices: Best practices for robust systems">
-            
-        </div>
-        
-        <div class="article-item">
-            <a href="http://arxiv.org/abs/2508.09971v1" class="headline style3" target="_blank" rel="noopener noreferrer">Vision-driven River Following of UAV via Safe Reinforcement Learning using Semantic Dynamics Model </a>
-            <span class="source">(arXiv)</span>
-            
-        </div>
-        
-        <div class="article-item">
-            <a href="https://www.oreilly.com/radar/where-is-ai-on-the-enshittification-curve/" class="headline style4" target="_blank" rel="noopener noreferrer">Where Is AI on the Enshittification Curve? </a>
-            <span class="source">(O'Reilly)</span>
-            
-            <img src="https://www.oreilly.com/radar/wp-content/uploads/sites/3/2019/06/curves-1871896_1920_crop-3328b5c27960965cbdfdd5f1aada31cf.jpg" alt="Article image for Where Is AI on the Enshittification Curve?">
-            
-        </div>
-        
-        <div class="article-item">
-            <a href="https://www.fastcompany.com/91386562/ai-isnt-killing-jobs-its-changing-who-gets-hired?utm_source=postup&utm_medium=email&utm_campaign=artificial-intelligence&position=1&partner=newsletter&campaign_date=08152025" class="headline style1" target="_blank" rel="noopener noreferrer">AI isn’t killing jobs, it’s changing who gets hired </a>
-            <span class="source">(Fastcompany)</span>
-            
-            <img src="https://images.fastcompany.com/image/upload/w_1280,q_auto,f_auto,fl_lossy/f_webp,q_auto,c_fit/wp-cms-2/2025/08/INC-Masters-Fast-Company-publishing-2025-08-14T172528.923.png" alt="Article image for AI isn’t killing jobs, it’s changing who gets hired">
-            
-        </div>
-        
-        <div class="article-item">
-            <a href="https://www.marktechpost.com/2025/08/14/google-ai-introduces-gemma-3-270m-a-compact-model-for-hyper-efficient-task-specific-fine-tuning/" class="headline style2" target="_blank" rel="noopener noreferrer">Google AI Introduces Gemma 3 270M: A Compact Model for Hyper-Efficient, Task-Specific Fine-Tuning </a>
-            <span class="source">(MarkTechPost)</span>
-            
-        </div>
-        
-    </div>
-    
-    <div class="column">
-        
-        <div class="article-item">
-            <a href="https://venturebeat.com/ai/gartner-gpt-5-is-here-but-the-infrastructure-to-support-true-agentic-ai-isnt-yet/" class="headline style1" target="_blank" rel="noopener noreferrer">Gartner: GPT-5 is here, but the infrastructure to support true agentic AI isn’t (yet)</a>
-            <span class="source">(VentureBeat)</span>
-            
-        </div>
-        
-        <div class="article-item">
-            <a href="https://dailyai.com/2025/05/chatgpt-is-making-people-think-theyre-gods-and-their-families-are-terrified/" class="headline style2" target="_blank" rel="noopener noreferrer">ChatGPT Is Making People Think They’re Gods and Their Families Are Terrified</a>
-            <span class="source">(DailyAI)</span>
-            
-        </div>
-        
-        <div class="article-item">
-            <a href="https://venturebeat.com/ai/that-cheap-open-source-ai-model-is-actually-burning-through-your-compute-budget/" class="headline style2" target="_blank" rel="noopener noreferrer">That ‘cheap’ open-source AI model is actually burning through your compute budget</a>
-            <span class="source">(VentureBeat)</span>
-            
-        </div>
-        
-        <div class="article-item">
-            <a href="https://www.analyticsvidhya.com/blog/2025/08/ace-ai-stock-trading/" class="headline style2" target="_blank" rel="noopener noreferrer">How AI Knows a Stock Will Rise, and How You Can Too</a>
-            <span class="source">(Analytics Vidhya)</span>
-            
-            <img src="https://www.youtube.com/embed/s6ld7o1T0_A" alt="Article image for How AI Knows a Stock Will Rise, and How You Can Too">
-            
-        </div>
-        
-        <div class="article-item">
-            <a href="https://aws.amazon.com/blogs/aws/minimize-ai-hallucinations-and-deliver-up-to-99-verification-accuracy-with-automated-reasoning-checks-now-available/" class="headline style2" target="_blank" rel="noopener noreferrer">Minimize AI hallucinations and deliver up to 99% verification accuracy with Automated Reasoning checks: Now available</a>
-            <span class="source">(Amazon)</span>
-            
-        </div>
-        
-    </div>
-</div>
-
 <footer>
-    &copy; 2025 Exhaustive AI. All rights reserved. <a href="mailto:ExhaustiveAI@gmail.com">Contact Us</a>
-    <h2>Top 25 AI Websites</h2>
-    <ul>
-        <li><a href="https://openai.com" target="_blank" rel="noopener noreferrer">OpenAI</a></li>
-        <li><a href="https://ai.google" target="_blank" rel="noopener noreferrer">Google AI</a></li>
-        <li><a href="https://www.microsoft.com/en-us/ai" target="_blank" rel="noopener noreferrer">Microsoft AI</a></li>
-        <li><a href="https://huggingface.co" target="_blank" rel="noopener noreferrer">Hugging Face</a></li>
-        <li><a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank" rel="noopener noreferrer">TechCrunch AI</a></li>
-        <li><a href="https://venturebeat.com/category/ai/" target="_blank" rel="noopener noreferrer">VentureBeat AI</a></li>
-        <li><a href="https://www.wired.com/tag/artificial-intelligence/" target="_blank" rel="noopener noreferrer">Wired AI</a></li>
-        <li><a href="https://www.technologyreview.com/topic/artificial-intelligence/" target="_blank" rel="noopener noreferrer">MIT Technology Review</a></li>
-        <li><a href="https://aimagazine.com" target="_blank" rel="noopener noreferrer">AI Magazine</a></li>
-        <li><a href="https://www.analyticsvidhya.com" target="_blank" rel="noopener noreferrer">Analytics Vidhya</a></li>
-        <li><a href="https://www.aitrends.com" target="_blank" rel="noopener noreferrer">AI Trends</a></li>
-        <li><a href="https://news.mit.edu/topic/artificial-intelligence2" target="_blank" rel="noopener noreferrer">MIT News AI</a></li>
-        <li><a href="https://www.dataversity.net" target="_blank" rel="noopener noreferrer">Dataversity</a></li>
-        <li><a href="https://emerj.com" target="_blank" rel="noopener noreferrer">Emerj</a></li>
-        <li><a href="https://www.kdnuggets.com" target="_blank" rel="noopener noreferrer">KDnuggets</a></li>
-        <li><a href="https://www.analyticsinsight.net" target="_blank" rel="noopener noreferrer">Analytics Insight</a></li>
-        <li><a href="https://insidebigdata.com" target="_blank" rel="noopener noreferrer">Inside Big Data</a></li>
-        <li><a href="https://www.datasciencecentral.com" target="_blank" rel="noopener noreferrer">Data Science Central</a></li>
-        <li><a href="https://developer.ibm.com" target="_blank" rel="noopener noreferrer">IBM Developer</a></li>
-        <li><a href="https://intelligence.org" target="_blank" rel="noopener noreferrer">Machine Intelligence Research Institute</a></li>
-        <li><a href="https://paperswithcode.com" target="_blank" rel="noopener noreferrer">Papers with Code</a></li>
-        <li><a href="https://www.anthropic.com" target="_blank" rel="noopener noreferrer">Anthropic</a></li>
-        <li><a href="https://stability.ai" target="_blank" rel="noopener noreferrer">Stability AI</a></li>
-        <li><a href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer">Perplexity AI</a></li>
-        <li><a href="https://www.artificialintelligence-news.com" target="_blank" rel="noopener noreferrer">Artificial Intelligence News</a></li>
-    </ul>
-</footer></body>
-</html>
+  <hr style="margin:36px 0;border:0;border-top:1px solid var(--border-color);opacity:.7">
+  <h2 style="text-align:center;margin:0 0 8px 0;">BEST AI NEWS SITES — NOT4EVA</h2>
+  <p style="text-align:center;color:var(--source-color);margin:0 0 16px 0;">
+    Curated, free/accessible AI business destinations
+  </p>
+
+  <div class="footer-cols" style="display:grid;gap:18px;grid-template-columns:1fr;max-width:1200px;margin:0 auto;">
+    <style>
+      @media (min-width: 900px) { .footer-cols { grid-template-columns: repeat(3, 1fr) !important; } }
+      footer ul { list-style:none; padding:0; margin:0; display:grid; gap:10px; }
+      footer li a { color: var(--link-color); text-decoration: underline; }
+    </style>
+
+    
+    
+      
+      
+      <ul>
+        
+          <li><a href="https://www.unite.ai/" target="_blank" rel="noopener noreferrer">Unite.AI</a></li>
+        
+          <li><a href="https://research.ibm.com/blog" target="_blank" rel="noopener noreferrer">IBM Research Blog</a></li>
+        
+          <li><a href="https://aibusiness.com/" target="_blank" rel="noopener noreferrer">AI Business</a></li>
+        
+          <li><a href="https://www.theregister.com/Tag/AI/" target="_blank" rel="noopener noreferrer">The Register – AI</a></li>
+        
+          <li><a href="https://ai.googleblog.com/" target="_blank" rel="noopener noreferrer">Google AI Blog</a></li>
+        
+          <li><a href="https://www.zdnet.com/topic/artificial-intelligence/" target="_blank" rel="noopener noreferrer">ZDNet – AI</a></li>
+        
+          <li><a href="https://the-decoder.com/" target="_blank" rel="noopener noreferrer">The Decoder</a></li>
+        
+          <li><a href="https://venturebeat.com/category/ai/" target="_blank" rel="noopener noreferrer">VentureBeat – AI</a></li>
+        
+          <li><a href="https://techmeme.com/" target="_blank" rel="noopener noreferrer">Techmeme</a></li>
+        
+          <li><a href="https://www.theverge.com/ai-artificial-intelligence" target="_blank" rel="noopener noreferrer">The Verge – AI</a></li>
+        
+      </ul>
+      
+      <ul>
+        
+          <li><a href="https://openai.com/blog" target="_blank" rel="noopener noreferrer">OpenAI Blog</a></li>
+        
+          <li><a href="https://siliconangle.com/tag/ai/" target="_blank" rel="noopener noreferrer">SiliconANGLE – AI</a></li>
+        
+          <li><a href="https://blogs.microsoft.com/" target="_blank" rel="noopener noreferrer">Microsoft Blog</a></li>
+        
+          <li><a href="https://www.reuters.com/technology/artificial-intelligence/" target="_blank" rel="noopener noreferrer">Reuters – AI</a></li>
+        
+          <li><a href="https://www.nextplatform.com/category/machine-learning/" target="_blank" rel="noopener noreferrer">The Next Platform – AI/HPC</a></li>
+        
+          <li><a href="https://www.infoworld.com/artificial-intelligence/" target="_blank" rel="noopener noreferrer">InfoWorld – AI</a></li>
+        
+          <li><a href="https://dailyai.com/" target="_blank" rel="noopener noreferrer">DailyAI</a></li>
+        
+          <li><a href="https://www.tomshardware.com/t/ai/" target="_blank" rel="noopener noreferrer">Tom’s Hardware – AI</a></li>
+        
+          <li><a href="https://www.axios.com/technology/automation-and-ai" target="_blank" rel="noopener noreferrer">Axios – AI</a></li>
+        
+          <li><a href="https://www.hpcwire.com/tag/ai/" target="_blank" rel="noopener noreferrer">HPCwire – AI</a></li>
+        
+      </ul>
+      
+      <ul>
+        
+          <li><a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank" rel="noopener noreferrer">TechCrunch – AI</a></li>
+        
+          <li><a href="https://www.marktechpost.com/" target="_blank" rel="noopener noreferrer">MarkTechPost</a></li>
+        
+          <li><a href="https://www.servethehome.com/tag/ai/" target="_blank" rel="noopener noreferrer">ServeTheHome – AI</a></li>
+        
+          <li><a href="https://blogs.nvidia.com/" target="_blank" rel="noopener noreferrer">NVIDIA News/Blog</a></li>
+        
+          <li><a href="https://www.artificialintelligence-news.com/" target="_blank" rel="noopener noreferrer">AI News (industry)</a></li>
+        
+          <li><a href="https://www.datacenterdynamics.com/en/ai/" target="_blank" rel="noopener noreferrer">DatacenterDynamics – AI</a></li>
+        
+          <li><a href="https://aws.amazon.com/blogs/aws/category/artificial-intelligence/" target="_blank" rel="noopener noreferrer">AWS – AI Blog</a></li>
+        
+          <li><a href="https://www.engadget.com/tag/ai/" target="_blank" rel="noopener noreferrer">Engadget – AI</a></li>
+        
+          <li><a href="https://www.cnbc.com/technology/" target="_blank" rel="noopener noreferrer">CNBC – Tech</a></li>
+        
+          <li><a href="https://www.eweek.com/artificial-intelligence/" target="_blank" rel="noopener noreferrer">eWeek – AI</a></li>
+        
+      </ul>
+      
+    
+  </div>
+
+  <p style="text-align:center;margin:20px 0 0 0;color:var(--source-color);font-size:.85em;">
+    &copy; 2025 Exhaustive AI. <a href="mailto:ExhaustiveAI@gmail.com">Contact Us</a>
+  </p>
+</footer>
