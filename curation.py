@@ -25,32 +25,63 @@ except KeyError as e:
     print(f"ERROR: {e}")
     exit(1)
 
-# Trimmed/optimized RSS feeds (removed slow/general ones, kept ~22 focused on AI/business/M&A)
+# Trimmed/optimized RSS feeds (business‑heavy + free‑friendly)
 RSS_FEEDS = [
-    "http://www.theverge.com/rss/group/ai-artificial-intelligence/index.xml",
+    # Major tech/business with AI sections (RSS or stable)
     "https://techcrunch.com/category/artificial-intelligence/feed/",
-    "https://www.wired.com/feed/category/business/artificial-intelligence/latest/rss",
-    "https://news.mit.edu/topic/artificial-intelligence2-rss.xml",
-    "https://ai.googleblog.com/feeds/posts/default",
-    "https://www.marktechpost.com/feed/",
-    "https://www.unite.ai/feed/",
     "https://venturebeat.com/category/ai/feed/",
-    "https://openai.com/blog/rss/",
-    "https://www.deepmind.com/blog/rss",
-    "https://www.analyticsvidhya.com/feed/",
-    "https://www.oreilly.com/radar/topics/ai-ml/feed/index.xml",
-    "https://dailyai.com/feed/",
-    "https://news.microsoft.com/source/topics/ai/feed/",
+    "https://www.theverge.com/rss/group/ai-artificial-intelligence/index.xml",
+    "https://www.wired.com/feed/category/business/artificial-intelligence/latest/rss",
     "https://www.fastcompany.com/section/artificial-intelligence/rss",
-    "https://aibusiness.com/rss.xml",
     "https://www.eweek.com/artificial-intelligence/feed/",
     "https://www.infoworld.com/artificial-intelligence/feed/",
-    "https://news.crunchbase.com/sections/ai/feed/",
-    "https://aws.amazon.com/blogs/aws/category/artificial-intelligence/feed/",
-    "https://emerj.com/feed/",
     "https://www.enterpriseai.news/feed/",
-    "https://www.businesswire.com/rss/topic/Artificial+Intelligence",  # Kept but monitor
-    "https://www.prnewswire.com/rss/artificial-intelligence-news.rss"  # Kept but monitor
+    "https://aibusiness.com/rss.xml",
+
+    # Corporate newsrooms (big brands announce here first)
+    "https://blogs.nvidia.com/feed/",
+    "https://about.fb.com/news/category/technology/ai/feed/",
+    "https://about.google/press/rss/",
+    "https://aws.amazon.com/blogs/aws/category/artificial-intelligence/feed/",
+    "https://blogs.microsoft.com/feed/",             # broad MSFT newsroom (AI appears often)
+    "https://news.microsoft.com/source/topics/ai/feed/",
+    "https://www.ibm.com/blogs/research/feed/",
+    "https://www.salesforce.com/news/feed/",
+    "https://blogs.oracle.com/rss",
+    "https://www.apple.com/newsroom/rss-feed.rss",   # ML/AI items appear; titles are strong
+    "https://www.adobe.com/blog/feed",               # Firefly/AI enterprise
+
+    # Crunchbase for deal flow (careful but useful)
+    "https://news.crunchbase.com/sections/ai/feed/",
+
+    # Curated AI publications (keep a few you had that perform)
+    "https://dailyai.com/feed/",
+    "https://www.marktechpost.com/feed/",
+    "https://emerj.com/feed/",
+
+    # Press wires (kept but down‑weighted in scoring)
+    "https://www.businesswire.com/rss/topic/Artificial+Intelligence",
+    "https://www.prnewswire.com/rss/artificial-intelligence-news.rss",
+
+    # Google News “intitle” company queries (great for big‑brand headlines, mostly free)
+    "https://news.google.com/rss/search?q=intitle:Microsoft+AI+when:7d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=intitle:Google+AI+OR+Alphabet+AI+when:7d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=intitle:Amazon+AI+OR+AWS+AI+when:7d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=intitle:NVIDIA+AI+when:7d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=intitle:OpenAI+when:7d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=intitle:Apple+AI+OR+%22Apple+Intelligence%22+when:7d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=intitle:Meta+AI+OR+Facebook+AI+when:7d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=intitle:IBM+AI+OR+watsonx+when:7d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=intitle:Salesforce+AI+OR+Einstein+when:7d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=intitle:Oracle+AI+when:7d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=intitle:Adobe+AI+OR+Firefly+when:7d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=intitle:Intel+AI+when:7d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=intitle:AMD+AI+when:7d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=intitle:Broadcom+AI+OR+AVGO+AI+when:7d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q=intitle:TSMC+AI+when:7d&hl=en-US&gl=US&ceid=US:en",
+
+    # Keep research minimal (you already cap technical), remove O’Reilly/Analytics Vidhya/Unite to de‑tech noise
+    # arXiv is injected via get_articles_from_arxiv() with a hard cap already.
 ]
 
 MAX_ARTICLES_PER_SOURCE = 2  # Reduced from 3 to speed up
@@ -64,31 +95,37 @@ STYLE_CLASSES = ['style1', 'style2', 'style3', 'style4']
 
 # Source mapping for friendly names
 SOURCE_MAP = {
-    'theverge': 'The Verge',
-    'techcrunch': 'TechCrunch',
-    'wired': 'Wired',
-    'mit': 'MIT News',
-    'googleblog': 'Google AI',
-    'marktechpost': 'MarkTechPost',
-    'unite': 'Unite.AI',
-    'venturebeat': 'VentureBeat',
-    'futurism': 'Futurism',
-    'singularityhub': 'Singularity Hub',
-    'openai': 'OpenAI',
-    'deepmind': 'DeepMind',
-    'analyticsvidhya': 'Analytics Vidhya',
-    'oreilly': "O'Reilly",
-    'dailyai': 'DailyAI',
-    # Added more mappings for potential future sources or variations
-    'x': 'X',
-    'twitter': 'X',
-    'bbc': 'BBC',
-    'cnn': 'CNN',
-    'nytimes': 'The New York Times',
-    'crunchbase': 'Crunchbase',
-    'businesswire': 'BusinessWire',
-    'prnewswire': 'PR Newswire',
-    # Add more as needed for other sources
+    # pubs
+    'theverge':'The Verge','techcrunch':'TechCrunch','wired':'Wired','fastcompany':'Fast Company',
+    'venturebeat':'VentureBeat','eweek':'eWeek','infoworld':'InfoWorld','enterpriseai':'EnterpriseAI',
+    'dailyai':'DailyAI','marktechpost':'MarkTechPost','emerj':'Emerj','crunchbase':'Crunchbase News',
+
+    # corporate
+    'nvidia':'NVIDIA','google':'Google','blogspot':'Google AI','amazon':'Amazon/AWS','microsoft':'Microsoft',
+    'ibm':'IBM','salesforce':'Salesforce','oracle':'Oracle','apple':'Apple','adobe':'Adobe','meta':'Meta',
+
+    # aggregators/search
+    'news':'Google News',   # for news.google.com items
+
+    # wires
+    'businesswire':'BusinessWire','prnewswire':'PR Newswire',
+}
+
+AUTHORITY_WEIGHTS = {
+    # high
+    'TechCrunch':0.86,'VentureBeat':0.84,'The Verge':0.82,'Wired':0.82,'Fast Company':0.8,
+    'EnterpriseAI':0.8,'InfoWorld':0.78,'eWeek':0.78,'Crunchbase News':0.78,
+    'Google News':0.80,  # varies by dest link; good discovery signal
+
+    # corporate first‑party (strong when announcing partnerships/deals)
+    'NVIDIA':0.9,'Microsoft':0.88,'Google':0.88,'Amazon/AWS':0.88,'IBM':0.85,'Salesforce':0.84,
+    'Oracle':0.83,'Apple':0.83,'Adobe':0.83,'Meta':0.82,
+
+    # specialty AI pubs you kept
+    'DailyAI':0.77,'MarkTechPost':0.75,'Emerj':0.78,
+
+    # wires (down‑weight to avoid PR spam dominating)
+    'BusinessWire':0.65,'PR Newswire':0.6
 }
 
 # AI relevance keywords (to filter non-AI stories)
