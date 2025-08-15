@@ -1,32 +1,43 @@
 {
-  "generated_at": "2025-08-15T04:46:49.980512+00:00",
+  "generated_at": "2025-08-15T05:59:05.090049+00:00",
   "items": [
     {
       "headline": "Most Read: Google Launches AI ‘Guided Learning’ Tool to Teach Users; Dell Tackles Unstructured Data for Generative AI Applications",
       "url": "https://aibusiness.com/nlp/most-read-google-launches-ai-guided-learning-tool-to-teach-users-dell-tackles-unstructured-data-for-generative-ai-applications",
-      "score": 132.0681,
+      "score": 130.8502,
       "image_url": "https://eu-images.contentstack.com/v3/assets/blt6b0f74e5591baa03/blt8ac1376de37d4523/689b572944153b25c2bd305b/Google_AI_guided_learning.jpg?width=1280&auto=webp&quality=80&disable=upscale",
       "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
       "summary": "Also inside, NTT DATA launches global Microsoft Cloud unit to accelerate AI; PTC, Nvidia partner to accelerate AI product design, and more",
       "source": "Aibusiness",
       "published": "2025-08-14T18:32:29+00:00",
-      "style": "style2"
+      "style": "style3"
+    },
+    {
+      "headline": "Can AI Turn the Tide on the Global Diabetes Epidemic",
+      "url": "https://www.aiwire.net/2025/08/13/can-ai-turn-the-tide-on-the-global-diabetes-epidemic/",
+      "score": 98.3442,
+      "image_url": null,
+      "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
+      "summary": "Across the world, diabetes is disrupting the lives of hundreds of millions of people. Current estimates put the number at about 589 million adults, roughly one in every nine, and projections suggest it could even pass 850 million within a generation. And that is just the adults we know about. Many view diabetes as a minor health condition, but that is not always the case. The disease claimed 3.4 million lives in 2024, translating to a life lost every nine seconds. The picture in the United States is equally alarming. Roughly 38 million Americans live with diabetes, affecting more than one in ten households. Some studies show that nearly half of the U.S. population has diabetes or prediabetes. Millions are unaware that they are at risk. Without treatment or lifestyle modification, they could suffer serious consequences. With such sobering figures, it is not surprising that the health services are under pressure to catch cases earlier and prevent more people from developing the disease. That involves everything from lightening the load on patients to improving results for entire communities. Can artificial intelligence make a real difference in the fight against diabetes? It looks promising. AI has the potential to make a significant difference. It can do a lot of what we haven’t been able to do with more traditional and manual methods. AI can analyze vast data sets to spot patterns, forecast changes in glucose levels before they happen, help doctors tailor treatment plans, and enable companies to develop better treatment tools. It can also inform public health programs that aim to reach people well before the disease takes root. A study in Frontiers in Endocrinology found that AI models trained on continuous glucose monitoring data (GMD) could predict blood sugar levels an hour ahead with a high degree of accuracy. For a patient, that extra hour is not just a statistic; it’s a game-changer. It is a chance to eat something, adjust insulin, or slow down before a dangerous spike or drop happens. That same predictive approach is now built into consumer devices. Dexcom’s G7 and Abbott’s FreeStyle Libre are just a couple of examples where this AI-powered technology can alert users when their glucose is likely to move outside the safe range.  For people dealing with frequent highs and lows in glucose levels, these alerts can reduce emergencies and help keep levels more stable. Additionally, it can help boost confidence in day-to-day management. Over time, the data can also reveal personal triggers, giving doctors better insight into how to fine-tune care for each individual. Researchers are also using AI to get a closer look at the biological drivers of diabetes. The goal is to have a long-term vision on how it is at a higher risk of developing diabetes.  At Stanford Medicine, a team developed a model that examines detailed glucose and metabolic data from patients. This can help us determine whether a case is primarily caused by insulin resistance, beta-cell dysfunction, or incretin deficiency. In trials, the model reached an impressive 90% accuracy for each pathway. That’s not bad for a piece of software that never went to medical school.  This level of unprecedented insight also changes the conversation with the doctors. Someone with insulin resistance might get a plan centered on improving sensitivity through medication and exercise. Someone with beta-cell dysfunction might be guided toward preserving or boosting insulin production. It is a step away from generic care plans and toward treatment that reflects the reality of each person’s condition.  On a broader scale, AI is being tapped for detection and prevention. Google, through its health division Verily, has built a retinal imaging system that can detect diabetic retinopathy and even cardiovascular risk factors from a single eye scan. It uses computer vision and deep learning models trained on thousands of labeled images to detect subtle changes in blood vessels and retinal tissue that can appear years before symptoms are noticeable.  The technology is already in use in screening programs in India and other countries, reaching people who may never have access to a specialist exam. Google is also exploring how wearable data from Fitbit devices can be analyzed to spot early metabolic changes. This signals a push toward making AI-powered diabetes detection and prevention part of everyday life. AI is also helping in the search for new treatments. We know that drug discovery has always been a slow and expensive process, but machine learning is speeding up the early stages. Models can scan through millions of molecular structures and predict which ones are most likely to target specific biological pathways involved in diabetes. This allows scientists to focus their lab testing on the most promising candidates. Some teams are using GenAI to design entirely new molecules that could improve insulin sensitivity or help protect the beta cells that produce insulin. This approach can reveal chemical possibilities that human researchers might not think to try. While it is not the cure the world is hoping for, it is creating opportunities for therapies that are more effective and come with fewer side effects. We are still in the early stages, but AI is already making an impact. It is now part of nearly every stage of diabetes care, from predicting glucose swings to guiding treatment, expanding screening programs, and accelerating drug development. It may not eliminate the disease, but it is giving us stronger tools to manage and <a class=\"read-more\" href=\"https://www.aiwire.net/2025/08/13/can-ai-turn-the-tide-on-the-global-diabetes-epidemic/\">Read more&#8230;</a>",
+      "source": "AIwire",
+      "published": "2025-08-13T18:58:07+00:00",
+      "style": "style4"
     },
     {
       "headline": "Cohere hits a $6.8B valuation as investors AMD, Nvidia, and Salesforce double down",
       "url": "https://techcrunch.com/2025/08/14/cohere-hits-a-6-8b-valuation-as-investors-amd-nvidia-and-salesforce-double-down/",
-      "score": 96.0002,
+      "score": 95.1142,
       "image_url": null,
       "related_image_url": "https://via.placeholder.com/600x300?text=AI+Headline+Image",
       "summary": "Cohere's market proposition has always been to offer secure LLMs specifically geared for enterprise use, not for consumers.",
       "source": "TechCrunch",
       "published": "2025-08-14T18:40:27+00:00",
-      "style": "style2"
+      "style": "style3"
     },
     {
       "headline": "Wassette: A bridge between Wasm and MCP",
       "url": "https://www.infoworld.com/article/4039243/wassette-a-bridge-between-wasm-and-mcp.html",
-      "score": 84.1413,
+      "score": 83.4101,
       "image_url": "https://www.infoworld.com/wp-content/uploads/2025/08/4039243-0-69891600-1755162118-shutterstock_2248315255-100947624-orig.jpg?quality=50&strip=all",
       "related_image_url": "https://via.placeholder.com/600x300?text=AI+Headline+Image",
       "summary": "<div id=\"remove_no_follow\">\n<div class=\"grid grid--cols-10@md grid--cols-8@lg article-column\">\n\t\t\t\t\t  <div class=\"col-12 col-10@md col-6@lg col-start-3@lg\">\n\t\t\t\t\t\t<div class=\"article-column__content\">\n<section class=\"wp-block-bigbite-multi-title\"><div class=\"container\"></div></section>\n\n\n\n<p>Microsoft’s fascination with AI agents as a tool for developers continues with <a href=\"https://opensource.microsoft.com/blog/2025/08/06/introducing-wassette-webassembly-based-tools-for-ai-agents/\">Wassette, a new open source release from its Azure Core Uptime</a> team. Built in <a href=\"https://www.infoworld.com/article/2255250/what-is-rust-safe-fast-and-easy-software-development.html\">Rust</a> and designed to host pieces of functionality written as <a href=\"https://www.infoworld.com/article/2255892/what-is-webassembly-the-next-generation-web-platform-explained.html\">WebAssembly</a> Components, it’s a first step to delivering customizable and composable functionality that can be deployed as a tool for a local agent—in this case, the <a href=\"https://www.infoworld.com/article/3609013/github-copilot-everything-you-need-to-know.html\">GitHub Copilot</a> agent running in <a href=\"https://www.infoworld.com/article/2335960/what-is-visual-studio-code-microsofts-extensible-code-editor.html\">Visual Studio Code</a> or any other <a href=\"https://www.infoworld.com/article/4029634/what-is-model-context-protocol-how-mcp-bridges-ai-and-external-services.html\">Model Context Protocol</a>-aware agent.</p>\n\n\n\n<p>Wassette is, at heart, relatively simple. It loads and runs components, sandboxing them using the familiar Wasmtime runtime, and provides an MCP interface by translating their interfaces to MCP functionality. Using Wassette and a mix of your own and public WebAssembly components, you can quickly assemble a library of secure tools tailored to a specific project.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"working-with-wassette-in-vs-code\">Working with Wassette in VS Code</h2>\n\n\n\n<p>Getting started is simple enough. Although I had trouble running the Arm version of Wassette both in Windows and in Linux, the X64 version worked the first time. <a href=\"https://github.com/microsoft/wassette/blob/main/docs/winget.md\">Windows users can install using WinGet</a>. Linux users can use curl and an install script. Other options include Homebrew support or using Nix to set up a development shell with Wassette.</p>\n\n\n\n<p>One minor issue did arise: A false positive virus detection in Windows Defender meant I had to temporarily disable my antivirus tools to complete the WinGet-based install. There is <a href=\"https://github.com/microsoft/wassette/issues/117\">a related GitHub issue</a> noting that the development team is working to register Wassette’s signature to avoid this in the future.</p>\n\n\n\n<p>Once installed, you need to register the Wassette MCP server with your developer tool. Microsoft provides instructions for <a href=\"https://github.com/microsoft/wassette/blob/main/docs/mcp-clients.md\">Visual Studio Code, Cursor, Claude Code, and Gemini CLI</a>. I did find that the script the documentation suggested for VS Code failed, and I had to install MCP <a href=\"https://code.visualstudio.com/docs/copilot/chat/mcp-servers\">manually using the tool built into VS Code’s GitHub Copilot Agent UI</a>. This required having to reinstall each time I restarted VS Code. Hopefully an updated version of the Wassette tool will fix this. It’s not a dealbreaker, but it is a bit awkward to repeatedly reload it.</p>\n\n\n\n<p>When the Wassette MCP server runs inside the GitHub Copilot Agent, you can start to use it. It will appear as another tool alongside other registered servers. You should note that if you have more than 128 tools registered in GitHub Copilot it can be slow to select the right tool for your prompt.</p>\n\n\n\n<p>The documentation provides a link to a basic time client that extends the base GitHub Copilot functionality. From the GitHub Copilot chat UI, I was able to load this from a remote OCI registry. The agent selected the Wassette MCP server and loaded the WebAssembly component. I could then use it to get the current time, a feature the base agent was unable to offer.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"an-extensible-secure-mcp-server\">An extensible, secure MCP server</h2>\n\n\n\n<p>Getting the time may seem to be a relatively trivial feature to add to the GitHub Copilot agent, but it’s only an example of what you can do with Wassette. This is an extensible platform; if a feature isn’t available, you can quickly write your own and add it. The added bonus of running in a WebAssembly sandbox reduces risk by isolating modules from each other and from the OS and the IDE.</p>\n\n\n\n<p><a href=\"https://www.infoworld.com/article/2337772/spiderlightning-making-webassembly-cloud-applications-portable.html?utm=hybrid_search\">Much of the security model comes from Wasmtime</a>, as it builds on a least-privilege model. A component loaded into Wassette must have explicit permissions for the services it needs, and it uses the agent chat interface to request them as needed. For example, a component that needs network access will request permission for each specific domain it connects to. This ensures that a module that gets the time from your PC’s lock won’t send your application keys to a nefarious domain. If it requests network permissions when you aren’t expecting them or for a domain you didn’t request, you can use the agent to block it.</p>\n\n\n\n<p>Microsoft has provided a set of sample tools to show what can be done with Wassette. They’re all WebAssembly components, <a href=\"https://github.com/microsoft/wassette/tree/main/examples\">written in a selection of different languages</a>. These include <a href=\"https://www.infoworld.com/article/2253770/what-is-python-powerful-intuitive-programming.html\">Python</a>, <a href=\"https://www.infoworld.com/article/2263137/what-is-javascript-the-full-stack-programming-language.html\">JavaScript</a>, Rust, and <a href=\"https://www.infoworld.com/article/2253031/whats-the-go-language-really-good-for-3.html\">Go</a>. If there’s Wasmtime support for a language, you can build a component with it, ready for use in Wassette.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"adding-features-with-webassembly-components\">Adding features with WebAssembly components</h2>\n\n\n\n<p>It’s important to understand that you don’t need to do anything with a WebAssembly component to use it with Wassette. I’ve previously described the <a href=\"https://www.infoworld.com/article/3975058/using-the-model-context-protocol-in-azure-and-beyond.html?utm=hybrid_search\">Model Context Protocol as a modern equivalent of tools like CORBA’s Interface Definition Language</a>, as it takes <a href=\"https://www.infoworld.com/article/2269032/what-is-an-api-application-programming-interfaces-explained.html\">APIs </a>and other interfaces and wraps them in an agent-ready description with a common way of sending and receiving information.</p>\n\n\n\n<p>Wassette does this by taking advantage of one of the key features of WebAssembly components: the fact that they expose functions as strongly typed library interfaces. Wassette can use any existing (and future) components, giving you eventual access to a wider ecosystem that will add flexibility to your agents.</p>\n\n\n\n<p>The key to this approach is how WebAssembly components interact with the Wasmtime framework, using WebAssembly Interface Types. This exposes typed functions and interfaces, giving you limited and controlled access to the component. If a component requires a string, it will only accept a string. You can also have multiple components written in different languages, all compiled to Wasm and running in the same Wassette host.</p>\n\n\n\n<p>You don’t need to learn anything new to build a component interface. They are implemented using the standard interface model in the language you choose before compiling to Wasm and storing in an OCI registry. Interfaces can support multiple operations, and <a href=\"https://github.com/bytecodealliance/componentize-dotnet\">the ByteCode Alliance provides tools to help build components in its GitHub repository</a>.</p>\n\n\n\n<p>It’s not hard to write WebAssembly components, and once you start taking advantage of WASI, you can build in local file system and network features, which can be controlled using the Wasmtime permissions framework through Wassette. If you need to add a feature to an agent to provide deeper grounding in actual data, this is one of the most efficient and straightforward ways to expose it via MCP securely.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"whats-next-for-wassette\">What’s next for Wassette?</h2>\n\n\n\n<p>This is an initial release and features are obviously missing. Perhaps the most important is the lack of a discovery feature, both for OCI registries and the WebAssembly components stored in them. For now, if you need a specific component, you need the right OCI URI. As Wassette is an <a href=\"https://www.infoworld.com/article/2262355/what-is-open-source-software-open-source-and-foss-explained.html\">open source</a> project, you can get involved in its <a href=\"https://github.com/microsoft/wassette\">development on GitHub</a>.</p>\n\n\n\n<p>With Wassette initially targeting developer-focused agents, there’s no real reason it can’t be part of any agent platform that uses MCP. You could use it on a customer service platform, with components that extend your CRM platform into other applications or anywhere that needs functionality that isn’t provided by the core MCP servers you’re using. It’s especially useful when those required functions are small and don’t require much code but still need to be secure with tightly controlled access to resources.</p>\n\n\n\n<p>It’s interesting to see a tool like this early in the life of modern <a href=\"https://www.infoworld.com/article/3611465/how-ai-agents-will-transform-the-future-of-work.html\">AI agents</a>. The combination of discoverable modular code that runs in your local context, along with the ability to quickly add new extensions, reminds me of the work that went into developing agent frameworks like Kaleida back in the 1990s. Today, we can build them on a platform with a local sandbox and we don’t need to learn a whole new language. With Wassette we can develop and deploy the features we need to see in an MCP server, installing them only when needed.</p>\n</div></div></div>\n</div>",
@@ -35,108 +46,108 @@
       "style": "style3"
     },
     {
+      "headline": "US government is reportedly in discussions to take stake in Intel",
+      "url": "https://techcrunch.com/2025/08/14/u-s-government-is-reportedly-in-discussions-to-take-stake-in-intel/",
+      "score": 75.6961,
+      "image_url": null,
+      "related_image_url": "https://via.placeholder.com/600x300?text=AI+Headline+Image",
+      "summary": "This deal would be meant to help Intel bulk up its U.S. chip manufacturing, including its much-delayed Ohio factory.",
+      "source": "TechCrunch",
+      "published": "2025-08-14T21:38:20+00:00",
+      "style": "style3"
+    },
+    {
       "headline": "Flight Deals is our new, AI-powered flight search tool - The Keyword",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1vNUVGNzVYcXlZMVJVczNybld6T21NdzROcmZNUW5YOTA3NEdyWTRuZy04QkRaMjdRejBsd0FuZXl6WTNrUXVfOG5hWTN0bU1VdWlMZC16Yjl1R01wdFg2OWZCQ2VMZkgtOXVvT1FoOTRraGI1aUE?oc=5",
-      "score": 75.8812,
+      "score": 75.2008,
       "image_url": null,
       "related_image_url": "https://via.placeholder.com/600x300?text=AI+Headline+Image",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE1vNUVGNzVYcXlZMVJVczNybld6T21NdzROcmZNUW5YOTA3NEdyWTRuZy04QkRaMjdRejBsd0FuZXl6WTNrUXVfOG5hWTN0bU1VdWlMZC16Yjl1R01wdFg2OWZCQ2VMZkgtOXVvT1FoOTRraGI1aUE?oc=5\" target=\"_blank\">Flight Deals is our new, AI-powered flight search tool</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Keyword</font>",
       "source": "Google",
       "published": "2025-08-14T14:26:04+00:00",
-      "style": "style3"
+      "style": "style4"
+    },
+    {
+      "headline": "Enterprise GenAI Startup Cohere Confirms $500M Raise At $6.8B Valuation And Taps Ex-Meta VP As New AI Chief",
+      "url": "https://news.crunchbase.com/ai/enterprise-genai-startup-unicorn-cohere-raise/",
+      "score": 68.5125,
+      "image_url": "https://news.crunchbase.com/wp-content/uploads/AI_Brain.jpg",
+      "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
+      "summary": "Toronto-based generative AI startup Cohere, founded by ex-Google researchers, announced Thursday that it has raised $500 million at a $6.8 billion valuation.",
+      "source": "Crunchbase News",
+      "published": "2025-08-14T18:35:51+00:00",
+      "style": "style4"
     },
     {
       "headline": "NVIDIA, National Science Foundation Support Ai2 Development of Open AI Models to Drive U.S. Scientific Leadership",
       "url": "https://blogs.nvidia.com/blog/national-science-foundation-ai2-open-ai-models/",
-      "score": 66.8028,
+      "score": 66.2097,
       "image_url": "https://blogs.nvidia.com/wp-content/uploads/2025/08/her-image-nvidia-nsf-ai2-logo-for-blog-4187350-1280x680-1-scaled.png",
       "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
       "summary": "NVIDIA is partnering with the U.S. National Science Foundation (NSF) to create an AI system that supports the development of multimodal language models for advancing scientific research in the United States. The partnership supports the NSF Mid-Scale Research Infrastructure project, called Open Multimodal AI Infrastructure to Accelerate Science (OMAI). “Bringing AI into scientific research has\t<a class=\"read-more\" href=\"https://blogs.nvidia.com/blog/national-science-foundation-ai2-open-ai-models/\">\n\t\tRead Article\t\t<span></span>\n\t</a>",
       "source": "NVIDIA",
       "published": "2025-08-14T13:00:44+00:00",
-      "style": "style2"
-    },
-    {
-      "headline": "Fine-tune OpenAI GPT-OSS models on Amazon SageMaker AI using Hugging Face libraries - Amazon Web Services",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPWkxnamZxZTZvd3dqNnB3YnlIZlI0WThuVDBZSWFZQkhDczBLWkNNUGFCNXdEZHFQZVFKZUVNMEVkMVdDcFpiVXNGTWJSOURQYWRUc2NOaTROT3dIbkFJVjVXWDMtUXdXYkNtMF9Zdm96OTdyX0xaNV9DaFh6UUF0dTI1V2JtU1RYQk9GVTJLcVVpN1VmOHMtWkhZcmV1aDZsZ0JFdFo1dDVCQmJJNGZzX01oeFNtTVRUQnQzSDRpV090N2xNVEYyd1R3?oc=5",
-      "score": 65.8003,
-      "image_url": null,
-      "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxPWkxnamZxZTZvd3dqNnB3YnlIZlI0WThuVDBZSWFZQkhDczBLWkNNUGFCNXdEZHFQZVFKZUVNMEVkMVdDcFpiVXNGTWJSOURQYWRUc2NOaTROT3dIbkFJVjVXWDMtUXdXYkNtMF9Zdm96OTdyX0xaNV9DaFh6UUF0dTI1V2JtU1RYQk9GVTJLcVVpN1VmOHMtWkhZcmV1aDZsZ0JFdFo1dDVCQmJJNGZzX01oeFNtTVRUQnQzSDRpV090N2xNVEYyd1R3?oc=5\" target=\"_blank\">Fine-tune OpenAI GPT-OSS models on Amazon SageMaker AI using Hugging Face libraries</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Amazon Web Services</font>",
-      "source": "Google",
-      "published": "2025-08-11T20:25:19+00:00",
-      "style": "style1"
-    },
-    {
-      "headline": "Microsoft is trying to poach Meta AI talent and offering multimillion-dollar pay packages, internal documents show - Business Insider",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPRGhRcVFoQXRSTldBNUZoX0lFNXVRZHQyeHdUdWFGclk3RS16ZTlMREtKUms2US0xeTkwbVMtc0U2R19yUWptMVJIdDExTGZHNjNtWUdzdG1maW9qZnhDZS1vZnJ1Yk9CN1hjNklQamhnSFFnX3RHN01HMjN1aDQwSk12VHcwcU15TzZyY2RkYl85bmp0QWdr?oc=5",
-      "score": 63.8516,
-      "image_url": null,
-      "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxPRGhRcVFoQXRSTldBNUZoX0lFNXVRZHQyeHdUdWFGclk3RS16ZTlMREtKUms2US0xeTkwbVMtc0U2R19yUWptMVJIdDExTGZHNjNtWUdzdG1maW9qZnhDZS1vZnJ1Yk9CN1hjNklQamhnSFFnX3RHN01HMjN1aDQwSk12VHcwcU15TzZyY2RkYl85bmp0QWdr?oc=5\" target=\"_blank\">Microsoft is trying to poach Meta AI talent and offering multimillion-dollar pay packages, internal documents show</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Business Insider</font>",
-      "source": "Google",
-      "published": "2025-08-12T17:48:00+00:00",
-      "style": "style2"
+      "style": "style3"
     },
     {
       "headline": "Apple Plots Expansion Into AI Robots, Home Security and Smart Displays - Bloomberg.com",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbEFEVGtsMGlmeDhMRzZUZmdYSFNTWjl3QjEzcUN5NXBtaVIyaXZkbnZDTWZzX0lsNTQxbGpjNnY4Q0xiNjVLUF9zWlBGWGQ0aC1xb0swd0NxNmxkcUs2cmJXaXduXzU4TGxZOV85VlJUbUFZVC1rNUJzX1EzTGVlZVdiaUp0U05YNDM2ZzlpUTIzRV9wanM2N2Iyczd4QjFLS19sc3VyTjFyQnl5YXJHZkdRQWlyU0hMYktoTDRNbTN0QQ?oc=5",
-      "score": 63.7729,
+      "score": 63.2767,
       "image_url": null,
       "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbEFEVGtsMGlmeDhMRzZUZmdYSFNTWjl3QjEzcUN5NXBtaVIyaXZkbnZDTWZzX0lsNTQxbGpjNnY4Q0xiNjVLUF9zWlBGWGQ0aC1xb0swd0NxNmxkcUs2cmJXaXduXzU4TGxZOV85VlJUbUFZVC1rNUJzX1EzTGVlZVdiaUp0U05YNDM2ZzlpUTIzRV9wanM2N2Iyczd4QjFLS19sc3VyTjFyQnl5YXJHZkdRQWlyU0hMYktoTDRNbTN0QQ?oc=5\" target=\"_blank\">Apple Plots Expansion Into AI Robots, Home Security and Smart Displays</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
       "source": "Google",
       "published": "2025-08-13T19:21:12+00:00",
-      "style": "style3"
+      "style": "style4"
     },
     {
-      "headline": "Balfour Beatty invests nearly $10M in Microsoft AI - Construction Dive",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPU3RRVU9RTWdMb2VUMzN2cE5rb2RIOTBfNHQzajRrZW5Walp6S0tuMTM0NTNIXzR2TVRzSF91ZGF3bE94cVBTWFJzYjhya3Zrc2ZLeUhybUxiSkh5UEZ0a3NxY2FEbTF0bHRDV3kzS3JpVzRPaUxXQzBETFBsQ1dmWDgyRUQ0SnBk?oc=5",
-      "score": 63.6,
-      "image_url": null,
-      "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxPU3RRVU9RTWdMb2VUMzN2cE5rb2RIOTBfNHQzajRrZW5Walp6S0tuMTM0NTNIXzR2TVRzSF91ZGF3bE94cVBTWFJzYjhya3Zrc2ZLeUhybUxiSkh5UEZ0a3NxY2FEbTF0bHRDV3kzS3JpVzRPaUxXQzBETFBsQ1dmWDgyRUQ0SnBk?oc=5\" target=\"_blank\">Balfour Beatty invests nearly $10M in Microsoft AI</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Construction Dive</font>",
-      "source": "Google",
-      "published": "2025-08-13T18:56:10+00:00",
+      "headline": "An update on Blood Oxygen for Apple Watch in the U.S.",
+      "url": "https://www.apple.com/newsroom/2025/08/an-update-on-blood-oxygen-for-apple-watch-in-the-us/",
+      "score": 58.9961,
+      "image_url": "https://www.apple.com/newsroom/images/logos/quick-reads-logos/Apple-logo.jpg.og.jpg",
+      "related_image_url": "https://via.placeholder.com/600x300?text=AI+Headline+Image",
+      "summary": "Apple will introduce a redesigned Blood Oxygen feature for some Apple Watch Series 9, Series 10, and Apple Watch Ultra 2 users.",
+      "source": "Apple",
+      "published": "2025-08-14T14:00:13+00:00",
+      "style": "style4"
+    },
+    {
+      "headline": "Unicorns Raising Fast Follow-On Rounds Are Mostly — But Not Only — An AI-Centric Bunch",
+      "url": "https://news.crunchbase.com/venture/unicorns-raising-rounds-quickly-ai-defense-fintech/",
+      "score": 54.1108,
+      "image_url": "https://news.crunchbase.com/wp-content/uploads/Unicorn_Money_v1.jpg",
+      "related_image_url": "https://via.placeholder.com/600x300?text=AI+Headline+Image",
+      "summary": "In addition to the big names in generative AI — OpenAI, Anthropic and xAI — unicorns developing industry-specific AI applications in areas such as legal tech, marketing and healthcare are raising follow-on rounds at a fast clip, as are the defense tech, cybersecurity and fintech sectors.",
+      "source": "Crunchbase News",
+      "published": "2025-08-14T12:00:19+00:00",
       "style": "style1"
-    },
-    {
-      "headline": "Howard University is Collaborating with Amazon Web Services to Advance AI Learning Across Higher Education - The Dig at Howard University",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNQXF0MTVXVTVKblhvNVg4dXU3c3l3X09KbGFWUm1DRVdTZC1hYXJqaGZFUDNxekpZZ3lyRUFvVi10WEV5d2pMcEpYUXBtOXlQeU54cWZNaS1sOHFKN2poeVBic01xalVqYXptc081RzRBQ3ZZMjc3akdzbWQxVDZpWXNVREFHMEt6U2MzRV8xcEtxajl5ZjZEaEVsN1BCLUVGTGJWTHk2dEhYdDNIVkM5RDNZelRUWmM5TzNGWVhsVUVlZV9ZQkw2VENjLUVJQQ?oc=5",
-      "score": 56.716,
-      "image_url": null,
-      "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxNQXF0MTVXVTVKblhvNVg4dXU3c3l3X09KbGFWUm1DRVdTZC1hYXJqaGZFUDNxekpZZ3lyRUFvVi10WEV5d2pMcEpYUXBtOXlQeU54cWZNaS1sOHFKN2poeVBic01xalVqYXptc081RzRBQ3ZZMjc3akdzbWQxVDZpWXNVREFHMEt6U2MzRV8xcEtxajl5ZjZEaEVsN1BCLUVGTGJWTHk2dEhYdDNIVkM5RDNZelRUWmM5TzNGWVhsVUVlZV9ZQkw2VENjLUVJQQ?oc=5\" target=\"_blank\">Howard University is Collaborating with Amazon Web Services to Advance AI Learning Across Higher Education</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Dig at Howard University</font>",
-      "source": "Google",
-      "published": "2025-08-12T23:52:42+00:00",
-      "style": "style2"
-    },
-    {
-      "headline": "Trump opens door to sales of version of Nvidia's next-gen AI chips in China - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNSU1wVW1LVU0xdDJFV0RGX1ZMUG4zaERvQl9ST1FMeWZBTUt5YWUzYkZsbm5qR29BNHlSS243YlFoNmc5WG5CWUhBUFNwM004ZUlhVXF1a0xEUnZFZWFxR2c4ejBlMVBBODNEaWI0cVlKM0VpbTE5TmlfSUZ1TjkzczNFZS04NTNNeE5iVzQ0VnpFT2VxZ2VHWm85VGlkZHpoalN0QTQ4dUVmbEhySWJN?oc=5",
-      "score": 45.0827,
-      "image_url": null,
-      "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxNSU1wVW1LVU0xdDJFV0RGX1ZMUG4zaERvQl9ST1FMeWZBTUt5YWUzYkZsbm5qR29BNHlSS243YlFoNmc5WG5CWUhBUFNwM004ZUlhVXF1a0xEUnZFZWFxR2c4ejBlMVBBODNEaWI0cVlKM0VpbTE5TmlfSUZ1TjkzczNFZS04NTNNeE5iVzQ0VnpFT2VxZ2VHWm85VGlkZHpoalN0QTQ4dUVmbEhySWJN?oc=5\" target=\"_blank\">Trump opens door to sales of version of Nvidia's next-gen AI chips in China</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "source": "Google",
-      "published": "2025-08-12T04:20:14+00:00",
-      "style": "style3"
     },
     {
       "headline": "Guardrails AI Introduces Snowglobe: The Simulation Engine for AI Agents and Chatbots",
       "url": "https://www.marktechpost.com/2025/08/14/guardrails-ai-introduces-snowglobe-the-simulation-engine-for-ai-agents-and-chatbots/",
-      "score": 40.7336,
+      "score": 40.3456,
       "image_url": null,
       "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
       "summary": "<p>Guardrails AI has announced the general availability of Snowglobe, a breakthrough simulation engine designed to address one of the thorniest challenges in conversational AI: reliably testing AI Agents/chatbots at scale before they ever reach production. Tackling an Infinite Input Space with Simulation Evaluating AI agents—especially open-ended chatbots—has traditionally required painstaking manual scenario creation. Developers might [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2025/08/14/guardrails-ai-introduces-snowglobe-the-simulation-engine-for-ai-agents-and-chatbots/\">Guardrails AI Introduces Snowglobe: The Simulation Engine for AI Agents and Chatbots</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
       "source": "MarkTechPost",
       "published": "2025-08-14T23:28:39+00:00",
-      "style": "style1"
+      "style": "style3"
+    },
+    {
+      "headline": "‘Warhammer 40,000: Dawn of War – Definitive Edition’ Storms GeForce NOW at Launch",
+      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-warhammer-dawn-of-war-definitive-edition/",
+      "score": 40.021,
+      "image_url": "https://blogs.nvidia.com/wp-content/uploads/2025/08/gfn-thursday-wh-40k-dawn-of-war-de-nv-blog-1280x680-logo.jpg",
+      "related_image_url": "https://via.placeholder.com/600x300?text=AI+Headline+Image",
+      "summary": "Warhammer 40,000: Dawn of War – Definitive Edition is marching onto GeForce NOW, expanding the cloud gaming platform’s library to over 2,300 supported titles. Battle is just a click away, as the iconic real-time strategy game joins seven new releases this week. Commanders can prepare their squads and steel their nerves on any device —\t<a class=\"read-more\" href=\"https://blogs.nvidia.com/blog/geforce-now-thursday-warhammer-dawn-of-war-definitive-edition/\">\n\t\tRead Article\t\t<span></span>\n\t</a>",
+      "source": "NVIDIA",
+      "published": "2025-08-14T14:00:46+00:00",
+      "style": "style3"
     },
     {
       "headline": "Monitoring microservices: Best practices for robust systems",
       "url": "https://www.infoworld.com/article/4037663/monitoring-microservices-best-practices-for-robust-systems.html",
-      "score": 40.0016,
+      "score": 39.654,
       "image_url": "https://www.infoworld.com/wp-content/uploads/2025/08/4037663-0-07428400-1755162080-microservices_minitature_figurines_service_repair_circuit_board_thinkstock_87524273-100624778-orig.jpg?quality=50&strip=all",
       "related_image_url": "https://via.placeholder.com/600x300?text=AI+Headline+Image",
       "summary": "<div id=\"remove_no_follow\">\n\t\t<div class=\"grid grid--cols-10@md grid--cols-8@lg article-column\">\n\t\t\t\t\t  <div class=\"col-12 col-10@md col-6@lg col-start-3@lg\">\n\t\t\t\t\t\t<div class=\"article-column__content\">\n<section class=\"wp-block-bigbite-multi-title\"><div class=\"container\"></div></section>\n\n\n\n<p>﻿Microservices architecture, while offering exceptional agility and scalability, introduces a new layer of complexity in terms of tracking. Gone are the times of monolithic applications where a single set of logs ought to tell you the whole tale. In a distributed environment, knowing the health and performance of your machine requires a sophisticated method. Efficient microservice monitoring isn’t always about gathering data; it’s about restructuring those records into actionable insights.</p>\n\n\n\n<p>So, how do you efficiently maintain a focus on your complex web offerings? It all boils down to a mixture of standardized observability practices and the right tooling.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"standardized-observability-the-foundation-of-understanding\">Standardized observability: The foundation of understanding </h2>\n\n\n\n<p>﻿Imagine trying to debug a conversation where everyone speaks a different language. That’s what it’s like trying to monitor microservices without standardized observability. To reap clarity and correlation, it’s vital to set up steady practices throughout all of your services for:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Logging.</strong> Implement a pre-defined logging with a well-known format (e.g., JSON). This ensures that logs from distinctive offerings are easily parsable and searchable, and provides quicker identification of issues. Include essential records like timestamps, provider names, log levels and unique request IDs. </li>\n\n\n\n<li><strong>Distributed tracing.</strong> When a request flows via multiple services, distributed tracing presents a detailed view of its journey. Adopt a general tool like OpenTelemetry to instrument your offerings. This allows you to visualize the flow, identify latency bottlenecks in specific provider calls and recognize dependencies. Using tools like<a href=\"http://middleware.io\"> middleware</a>, Grafana, etc, which continuously integrate Otel with different service providers, so more people can benefit from Otel and have a deep understanding of their log level data. </li>\n\n\n\n<li><strong>Metrics.</strong> Define a standard set of metrics (e.g., request count, error rate, latency) with proper naming conventions throughout all services. This enables you to evaluate performance metrics across unique additives and construct complete dashboards. </li>\n</ul>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"a-unified-observability-stack-your-central-command-center\">A unified observability stack: Your central command center</h2>\n\n\n\n<p>Collecting extensive amounts of telemetry data is most beneficial if you can combine, visualize and examine it successfully. A unified observability stack is paramount. By integrating tools like middleware that work together seamlessly, you create a holistic view of your microservices ecosystem. These unified tools ensure that all your telemetry information — logs, traces and metrics — is correlated and accessible from a single pane of glass, dramatically decreasing the mean time to detect (MTTD) and mean time to resolve (MTTR) problems. The energy lies in seeing the whole photograph, no longer just remote points.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"continuous-tracking-and-dependency-mapping-understanding-behavior\">Continuous tracking and dependency mapping: Understanding behavior </h2>\n\n\n\n<p>﻿Once your observability stack is in place, the real work of monitoring begins. Continuously capturing key overall performance signs (KPIs) to monitor the real-time performance of your device:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Service health.</strong> Monitor the uptime and availability of every individual service. Proactive health checks can regularly discover issues before they affect customers. </li>\n\n\n\n<li><strong>Latency.</strong> Track the time it takes for requests to be processed by each provider. High latency can indicate bottlenecks or overall performance troubles. Drill down to specific inner calls contributing to the delay. </li>\n\n\n\n<li><strong>Error rates.</strong> Monitor closely the wide variety of errors generated with the aid of every request. Spikes in error rates regularly signal underlying problems, requiring immediate research into the type and frequency of errors. </li>\n\n\n\n<li><strong>Inter-service dependencies.</strong> It maps out how your services interact with each other. Understanding these dependencies is essential for pinpointing the root cause of issues that might propagate through your system. Through automated discovery and visualization of these dependencies, we can reduce the radius of any failure. </li>\n</ul>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"meaningful-slos-and-actionable-alerts-beyond-the-noise\">Meaningful SLOs and actionable alerts: Beyond the noise</h2>\n\n\n\n<p>﻿Collecting information is good, but acting on it is better. Define significant service level objectives (SLOs) that replicate the predicted performance and reliability of your offerings. These SLOs need to be tied to enterprise desires and customer experience, ensuring that your monitoring immediately contributes to enterprise success.</p>\n\n\n\n<p>Based on your SLOs, install actionable indicators that:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Avoid noise.</strong> Don’t send an alert on each minor change. Configure alerts to trigger only when deviations from your SLOs are sizable and require immediate attention, thereby preventing alert fatigue in your on-call teams. </li>\n\n\n\n<li><strong>Enable rapid incident response.</strong> Alerts need to provide enough context (e.g., service name, error type, relevant metrics, linked traces) to allow your crew to apprehend the issue and start troubleshooting quickly. Integrate alerts with your incident management tools for seamless workflow and automatic escalation. </li>\n</ul>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"enhanced-root-cause-analysis-contextual-debugging\">Enhanced root cause analysis: Contextual debugging </h2>\n\n\n\n<p>﻿When an incident takes place, time is the main thing. Efficient root cause analysis is important. Leverage the energy of your standardized telemetry:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Trace context.</strong> Use trace IDs and span IDs from your disbursed tracing machine to attach logs and metrics to particular requests. This allows you to comply with a single request’s path through multiple services and quickly identify where it failed or experienced overall performance degradation. This gives detailed visibility and dramatically reduces debugging time. </li>\n\n\n\n<li><strong>Correlation IDs.</strong> Implement correlation IDs that are passed through all services for a given request. This allows you to easily search and filter logs and metrics associated with a selected user intersection or commercial enterprise transaction, providing a holistic view for debugging. This is beneficial for tracing complicated enterprise flows. </li>\n</ul>\n\n\n\n<p>By combining trace context and correlation IDs, you enable automated and contextual debugging throughout the whole microservices architecture, reconstructing a frightening challenge into a streamlined method. This technique is the most effective, as it allows you to repair issues quickly but also provides insights for proactive system improvements and overall performance optimizations. </p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"a-strong-and-resilient-microservices-structure\">A strong and resilient microservices structure</h2>\n\n\n\n<p>﻿Monitoring microservices effectively is an ongoing journey that requires a commitment to standardization of data, using the right tools and a proactive mindset. By utilizing standardized observability practices, adapting a unified observability stack, continuously monitoring key metrics, placing meaningful SLOs and allowing enhanced root cause analysis, you may construct a strong and resilient microservices structure that truly serves your business desires and delights your customers. Don’t just accumulate data; instead, use it to understand, count on and solve problems before they impact your customers.</p>\n\n\n\n<p></p>\n\n\n\n<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><strong><br /></strong><a href=\"https://www.infoworld.com/expert-contributor-network/\"><strong>Want to join?</strong></a></p>\n</div></div></div></div>",
@@ -145,64 +156,31 @@
       "style": "style3"
     },
     {
-      "headline": "Basis scales accounting by turning OpenAI model progress into trusted agents - OpenAI",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1jYzRpSnZEajdjTXZhVkxzYkpzTHRPV2hURmZmYUFRbldDMXJBTHpYOHNPWXRxeDlKcS01X0ZuV0otLTg0T2c?oc=5",
-      "score": 39.4335,
-      "image_url": null,
-      "related_image_url": "https://via.placeholder.com/600x300?text=AI+Headline+Image",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiRkFVX3lxTE1jYzRpSnZEajdjTXZhVkxzYkpzTHRPV2hURmZmYUFRbldDMXJBTHpYOHNPWXRxeDlKcS01X0ZuV0otLTg0T2c?oc=5\" target=\"_blank\">Basis scales accounting by turning OpenAI model progress into trusted agents</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">OpenAI</font>",
-      "source": "Google",
-      "published": "2025-08-12T18:53:38+00:00",
-      "style": "style3"
-    },
-    {
       "headline": "Meta’s AI rules have let bots hold ‘sensual’ chats with kids, offer false medical info - Reuters",
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOdFdUZnBmaFBOeEhCRTJMRnU1V2xiQWJHOVlFaWNLSXlDQkF2aXhfZlNIcHdpVURXbHozLVlKcmVzd28wVlA2UlR6Z0RVV3ZNOVVocjNvTWtkWlV4Y2hmQXZsZ0pSTngyUmxFeTZKRlUteVMwWGdoeHhrb3ZNM3lvbmpkaE5Qdw?oc=5",
-      "score": 38.0454,
+      "score": 37.7219,
       "image_url": null,
       "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxOdFdUZnBmaFBOeEhCRTJMRnU1V2xiQWJHOVlFaWNLSXlDQkF2aXhfZlNIcHdpVURXbHozLVlKcmVzd28wVlA2UlR6Z0RVV3ZNOVVocjNvTWtkWlV4Y2hmQXZsZ0pSTngyUmxFeTZKRlUteVMwWGdoeHhrb3ZNM3lvbmpkaE5Qdw?oc=5\" target=\"_blank\">Meta’s AI rules have let bots hold ‘sensual’ chats with kids, offer false medical info</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
       "source": "Google",
       "published": "2025-08-14T07:00:00+00:00",
-      "style": "style1"
+      "style": "style3"
     },
     {
       "headline": "ToonComposer: Streamlining Cartoon Production with Generative Post-Keyframing",
       "url": "http://arxiv.org/abs/2508.10881v1",
-      "score": 37.0289,
+      "score": 36.6891,
       "image_url": null,
       "related_image_url": "https://via.placeholder.com/600x300?text=AI+Headline+Image",
       "summary": "Traditional cartoon and anime production involves keyframing, inbetweening,\nand colorization stages, which require intensive manual effort. Despite recent\nadvances in AI, existing methods often handle these stages separately, leading\nto error accumulation and artifacts. For instance, inbetweening approaches\nstruggle with large motions, while colorization methods require dense per-frame\nsketches. To address this, we introduce ToonComposer, a generative model that\nunifies inbetweening and colorization into a single post-keyframing stage.\nToonComposer employs a sparse sketch injection mechanism to provide precise\ncontrol using keyframe sketches. Additionally, it uses a cartoon adaptation\nmethod with the spatial low-rank adapter to tailor a modern video foundation\nmodel to the cartoon domain while keeping its temporal prior intact. Requiring\nas few as a single sketch and a colored reference frame, ToonComposer excels\nwith sparse inputs, while also supporting multiple sketches at any temporal\nlocation for more precise motion control. This dual capability reduces manual\nworkload and improves flexibility, empowering artists in real-world scenarios.\nTo evaluate our model, we further created PKBench, a benchmark featuring\nhuman-drawn sketches that simulate real-world use cases. Our evaluation\ndemonstrates that ToonComposer outperforms existing methods in visual quality,\nmotion consistency, and production efficiency, offering a superior and more\nflexible solution for AI-assisted cartoon production.",
       "source": "arXiv",
       "published": "2025-08-14T17:50:11+00:00",
-      "style": "style1"
-    },
-    {
-      "headline": "Adobe Stock Downgraded As ‘AI Is Eating Software’ - Investor's Business Daily",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVE05dDlEY3lFSVJ1SVBFRlJ0SWlMUTRhLWt4UVRwNlNDb1RmVmJWcE1pQTRYNXVFX2NmUF94Y3g3OGx6TjZreFNNLTZ1bVFjc2loSUFiSjN1ZmRVclNfWF9fOFBkRjhCbENzRzhSeFRJY3JGOXpCWmR4R2NUeDZQQWtPNUVwMHpJRkZKOGJud3U?oc=5",
-      "score": 35.718,
-      "image_url": null,
-      "related_image_url": "https://via.placeholder.com/600x300?text=AI+Headline+Image",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNVE05dDlEY3lFSVJ1SVBFRlJ0SWlMUTRhLWt4UVRwNlNDb1RmVmJWcE1pQTRYNXVFX2NmUF94Y3g3OGx6TjZreFNNLTZ1bVFjc2loSUFiSjN1ZmRVclNfWF9fOFBkRjhCbENzRzhSeFRJY3JGOXpCWmR4R2NUeDZQQWtPNUVwMHpJRkZKOGJud3U?oc=5\" target=\"_blank\">Adobe Stock Downgraded As ‘AI Is Eating Software’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investor's Business Daily</font>",
-      "source": "Google",
-      "published": "2025-08-11T22:18:00+00:00",
       "style": "style3"
-    },
-    {
-      "headline": "Oracle Health debuts AI-powered EHR designed as a 'voice-first' solution embedded with agentic AI - Fierce Healthcare",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOTkFPbU0zZW5uMkREZjdyYklYeFlLMklMczM2N0lkaHV1OENwVEVUdWU5SFd2emZMcWhOMVg3aV8xYjZXaE9iS0ZBU1A4T1pfRlVMN0VOWFJfbmhmU2VaQ3RrUEdHQW5aVVpOTUxQSlNnbVkyRE5JbmtGWmdjM1pPWVozMGp0bVhWSWF6ODhKNTVtb1ViSXZhbGtzbGxSeGVzUWhLVXVWUzZfVWVxN3dQMWN1UlBHTDZKUTBaRUE3cjZhZWdfNDJVOXB3?oc=5",
-      "score": 33.7497,
-      "image_url": null,
-      "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxOTkFPbU0zZW5uMkREZjdyYklYeFlLMklMczM2N0lkaHV1OENwVEVUdWU5SFd2emZMcWhOMVg3aV8xYjZXaE9iS0ZBU1A4T1pfRlVMN0VOWFJfbmhmU2VaQ3RrUEdHQW5aVVpOTUxQSlNnbVkyRE5JbmtGWmdjM1pPWVozMGp0bVhWSWF6ODhKNTVtb1ViSXZhbGtzbGxSeGVzUWhLVXVWUzZfVWVxN3dQMWN1UlBHTDZKUTBaRUE3cjZhZWdfNDJVOXB3?oc=5\" target=\"_blank\">Oracle Health debuts AI-powered EHR designed as a 'voice-first' solution embedded with agentic AI</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fierce Healthcare</font>",
-      "source": "Google",
-      "published": "2025-08-13T13:00:00+00:00",
-      "style": "style2"
     },
     {
       "headline": "Google AI Introduces Gemma 3 270M: A Compact Model for Hyper-Efficient, Task-Specific Fine-Tuning",
       "url": "https://www.marktechpost.com/2025/08/14/google-ai-introduces-gemma-3-270m-a-compact-model-for-hyper-efficient-task-specific-fine-tuning/",
-      "score": 31.3335,
+      "score": 31.0377,
       "image_url": null,
       "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
       "summary": "<p>Google AI has expanded the Gemma family with the introduction of Gemma 3 270M, a lean, 270-million-parameter foundation model built explicitly for efficient, task-specific fine-tuning. This model demonstrates robust instruction-following and advanced text structuring capabilities “out of the box,” meaning it’s ready for immediate deployment and customization with minimal additional training. Design Philosophy: “Right Tool [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2025/08/14/google-ai-introduces-gemma-3-270m-a-compact-model-for-hyper-efficient-task-specific-fine-tuning/\">Google AI Introduces Gemma 3 270M: A Compact Model for Hyper-Efficient, Task-Specific Fine-Tuning</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
@@ -213,7 +191,7 @@
     {
       "headline": "Salesforce, PayPal Execs Rethink Finance for the Digital Labor Era",
       "url": "https://www.salesforce.com/news/stories/rethinking-cfo-role-with-agentic-ai/",
-      "score": 28.34,
+      "score": 28.0813,
       "image_url": null,
       "related_image_url": "https://via.placeholder.com/600x300?text=AI+Headline+Image",
       "summary": "Two top executives are rethinking the role of the chief financial officer in the age of agentic AI. Why it matters: Salesforce&#8217;s Robin Washington and PayPal&#8217;s Jamie Miller — both of whom lead the financial and operating functions at their organizations — represent a new generation of finance leaders transforming their roles to realize the [&#8230;]",
@@ -224,18 +202,29 @@
     {
       "headline": "USD Adopts Google AI Products for Campus Use - University of San Diego",
       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1MOVhfZE9odHdvZWplbDA3dmJ1RFpQQmRYNFdfbndJYUY4SVg4SEd2dWE3bXB3V0N0Znc3SU9nb2JybFpWWU11YV94ajN6dV8wQUJac0J6N3htRk1ybzFzZUNpSQ?oc=5",
-      "score": 24.8447,
+      "score": 24.6503,
       "image_url": null,
       "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTE1MOVhfZE9odHdvZWplbDA3dmJ1RFpQQmRYNFdfbndJYUY4SVg4SEd2dWE3bXB3V0N0Znc3SU9nb2JybFpWWU11YV94ajN6dV8wQUJac0J6N3htRk1ybzFzZUNpSQ?oc=5\" target=\"_blank\">USD Adopts Google AI Products for Campus Use</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">University of San Diego</font>",
       "source": "Google",
       "published": "2025-08-13T20:04:19+00:00",
-      "style": "style2"
+      "style": "style3"
+    },
+    {
+      "headline": "Street View has now come to Nepal.",
+      "url": "https://blog.google/products/maps/nepal-street-view/",
+      "score": 20.2268,
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Lush_Green_Mountains.max-600x600.format-webp.webp",
+      "related_image_url": "https://via.placeholder.com/600x300?text=AI+Headline+Image",
+      "summary": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Lush_Green_Mountains.max-600x600.format-webp.webp\" />You can now virtually explore the stunning landscapes and vibrant culture of Nepal in Street View. Wander the lively streets of Kathmandu, discover the serene beauty of …",
+      "source": "Blog",
+      "published": "2025-08-15T04:30:00+00:00",
+      "style": "style4"
     },
     {
       "headline": "Gartner: GPT-5 is here, but the infrastructure to support true agentic AI isn’t (yet)",
       "url": "https://venturebeat.com/ai/gartner-gpt-5-is-here-but-the-infrastructure-to-support-true-agentic-ai-isnt-yet/",
-      "score": 20.2536,
+      "score": 20.0618,
       "image_url": null,
       "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
       "summary": "While OpenAI’s GPT-5 is highly-performant, capable and an important step forward, it features just faint glimmers of true agentic AI.",
@@ -244,31 +233,42 @@
       "style": "style2"
     },
     {
+      "headline": "Google Commits $9B to Expand AI, Cloud Infrastructure in Oklahoma",
+      "url": "https://aibusiness.com/data-centers/google-commits-9b-to-expand-ai-cloud-infrastructure-in-oklahoma",
+      "score": 18.6668,
+      "image_url": "https://eu-images.contentstack.com/v3/assets/blt6b0f74e5591baa03/bltb6062508c5ec9459/689e1cf4ccd3f139ad8c7073/Google_Pryor_Oklahoma.jpg?width=1280&auto=webp&quality=80&disable=upscale",
+      "related_image_url": "https://via.placeholder.com/600x300?text=AI+Headline+Image",
+      "summary": "Company plans to build a new data center in Stillwater and expand its Pryor facility while supporting workforce development",
+      "source": "Aibusiness",
+      "published": "2025-08-14T18:21:32+00:00",
+      "style": "style2"
+    },
+    {
       "headline": "Empirical Investigation into Configuring Echo State Networks for Representative Benchmark Problem Domains",
       "url": "http://arxiv.org/abs/2508.10887v1",
-      "score": 11.4017,
+      "score": 11.297,
       "image_url": null,
       "related_image_url": "https://via.placeholder.com/600x300?text=AI+Headline+Image",
       "summary": "This paper examines Echo State Network, a reservoir computer, performance\nusing four different benchmark problems, then proposes heuristics or rules of\nthumb for configuring the architecture, as well as the selection of parameters\nand their values, which are applicable to problems within the same domain, to\nhelp serve to fill the experience gap needed by those entering this field of\nstudy. The influence of various parameter selections and their value\nadjustments, as well as architectural changes made to an Echo State Network, a\npowerful recurrent neural network configured as a reservoir computer, can be\nchallenging to fully comprehend without experience in the field, and even some\nhyperparameter optimization algorithms may have difficulty adjusting parameter\nvalues without proper manual selections made first. Therefore, it is imperative\nto understand the effects of parameters and their value selection on Echo State\nNetwork architecture performance for a successful build. Thus, to address the\nrequirement for an extensive background in Echo State Network architecture, as\nwell as examine how Echo State Network performance is affected with respect to\nvariations in architecture, design, and parameter selection and values, a\nseries of benchmark tasks representing different problem domains, including\ntime series prediction, pattern generation, chaotic system prediction, and time\nseries classification, were modeled and experimented on to show the impact on\nthe performance of Echo State Network.",
       "source": "arXiv",
       "published": "2025-08-14T17:55:47+00:00",
-      "style": "style2"
+      "style": "style3"
     },
     {
       "headline": "That ‘cheap’ open-source AI model is actually burning through your compute budget",
       "url": "https://venturebeat.com/ai/that-cheap-open-source-ai-model-is-actually-burning-through-your-compute-budget/",
-      "score": 8.0327,
+      "score": 7.9548,
       "image_url": null,
       "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
       "summary": "New research reveals open-source AI models use up to 10 times more computing resources than closed alternatives, potentially negating cost advantages for enterprise deployments.",
       "source": "VentureBeat",
       "published": "2025-08-15T02:24:49+00:00",
-      "style": "style4"
+      "style": "style1"
     },
     {
       "headline": "AI isn’t killing jobs, it’s changing who gets hired",
       "url": "https://www.fastcompany.com/91386562/ai-isnt-killing-jobs-its-changing-who-gets-hired?utm_source=postup&utm_medium=email&utm_campaign=artificial-intelligence&position=1&partner=newsletter&campaign_date=08152025",
-      "score": 7.8056,
+      "score": 7.7305,
       "image_url": "https://images.fastcompany.com/image/upload/w_1280,q_auto,f_auto,fl_lossy/f_webp,q_auto,c_fit/wp-cms-2/2025/08/INC-Masters-Fast-Company-publishing-2025-08-14T172528.923.png",
       "related_image_url": "https://source.unsplash.com/600x300/?ai,technology",
       "summary": "<p>Hiring systems should prioritize contribution over credentialism.</p>",

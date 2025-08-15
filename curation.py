@@ -1,3 +1,17 @@
+
+def clean_punct(s: str) -> str:
+    """Normalize curly punctuation to ASCII for display strings (footer/site names)."""
+    if s is None:
+        return s
+    try:
+        txt = str(s)
+    except Exception:
+        return s
+    # Integer codepoints -> ASCII replacements (safe for source code)
+    # [removed broken trans mapping]
+
+    return txt.translate(trans).strip()
+
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
@@ -23,6 +37,104 @@ import google.generativeai as genai
 from urllib3.util.retry import Retry
 from requests.adapters import HTTPAdapter
 
+def clean_punct(s: str) -> str:
+    """Normalize curly punctuation to ASCII for display strings (footer/site names)."""
+    if s is None:
+        return s
+    try:
+        txt = str(s)
+    except Exception:
+        return s
+    trans = {
+        0x2014: '-',   # em dash —
+        0x2013: '-',   # en dash –
+        0x2019: "'",   # right single ’
+        0x2018: "'",   # left single ‘
+        0x201C: '"',   # left double “
+        0x201D: '"',   # right double ”
+        0x00A0: ' ',   # NBSP
+    }
+    return txt.translate(trans).strip()
+
+
+def clean_punct(s: str) -> str:
+    """Normalize curly punctuation to ASCII for display strings (footer/site names)."""
+    if s is None:
+        return s
+    try:
+        txt = str(s)
+    except Exception:
+        return s
+    trans = {
+        0x2014: '-',   # em dash —
+        0x2013: '-',   # en dash –
+        0x2019: "'",   # right single ’
+        0x2018: "'",   # left single ‘
+        0x201C: '"',   # left double “
+        0x201D: '"',   # right double ”
+        0x00A0: ' ',   # NBSP
+    }
+    return txt.translate(trans).strip()
+
+
+def clean_punct(s: str) -> str:
+    """Normalize curly punctuation to ASCII for display strings (footer/site names)."""
+    if s is None:
+        return s
+    try:
+        txt = str(s)
+    except Exception:
+        return s
+    # [removed broken trans mapping]
+
+    return txt.translate(trans).strip()
+
+
+def clean_punct(s: str) -> str:
+    """Normalize curly quotes/dashes to ASCII to avoid mojibake in footer/site names."""
+    try:
+        s = str(s)
+    except Exception:
+        return s
+    # [removed broken trans mapping]
+
+    for k, v in trans.items():
+        s = s.replace(k, v)
+    return s.strip()
+
+
+def clean_punct(s: str) -> str:
+    """Normalize curly quotes/dashes to ASCII to avoid mojibake."""
+    try:
+        s = str(s)
+    except Exception:
+        return s
+    trans = str.maketrans({
+        "\u2014": "-",  # em dash -
+        "\u2013": "-",  # en dash -
+        "\u2019": "'",  # right single quote '
+        "\u2018": "'",  # left single quote ‘
+        "\u201c": '"',  # left double "
+        "\u201d": '"',  # right double "
+        "\xa0": " ",   # non-breaking space
+    })
+    return s.translate(trans).strip()
+
+
+
+def clean_punct(s: str) -> str:
+    """Normalize curly quotes/dashes to ASCII to avoid mojibake."""
+    try:
+        s = str(s)
+    except Exception:
+        return s
+    # [removed broken trans mapping]
+
+    for k, v in trans.items():
+        s = s.replace(k, v)
+    return s.strip()
+
+
 # ---------------------------
 # Admin / data file locations
 # ---------------------------
@@ -43,7 +155,7 @@ try:
     genai.configure(api_key=gemini_api_key)
     gemini_model = genai.GenerativeModel('gemini-1.5-flash')
 except Exception as e:
-    print(f"WARNING: {e} — running WITHOUT Gemini. Headlines will use original titles.")
+    print(f"WARNING: {e} - running WITHOUT Gemini. Headlines will use original titles.")
     USE_GEMINI = False
     gemini_model = None
 
@@ -287,6 +399,12 @@ def freshness_multiplier_scored(published_at, half_life_hours=48.0):
 # ---------------------------
 # Fetchers
 # ---------------------------
+
+def clean_punct(s: str) -> str:
+    """Normalize curly quotes/dashes to ASCII to avoid mojibake."""
+    if not isinstance(s, str):
+        return s
+
 def load_cache():
     if os.path.exists(CACHE_FILE):
         with open(CACHE_FILE,'rb') as f:
@@ -637,24 +755,24 @@ if __name__ == "__main__":
 
     # Footer rotation (Top 30 free/accessible AI business destinations)
     CURATED_SITES_POOL = [
-        ("Reuters – AI","https://www.reuters.com/technology/artificial-intelligence/",True),
-        ("Axios – AI","https://www.axios.com/technology/automation-and-ai",True),
-        ("CNBC – Tech","https://www.cnbc.com/technology/",True),
+        ("Reuters - AI","https://www.reuters.com/technology/artificial-intelligence/",True),
+        ("Axios - AI","https://www.axios.com/technology/automation-and-ai",True),
+        ("CNBC - Tech","https://www.cnbc.com/technology/",True),
         ("Techmeme","https://techmeme.com/",True),
-        ("VentureBeat – AI","https://venturebeat.com/category/ai/",True),
-        ("TechCrunch – AI","https://techcrunch.com/category/artificial-intelligence/",True),
-        ("The Verge – AI","https://www.theverge.com/ai-artificial-intelligence",True),
-        ("ZDNet – AI","https://www.zdnet.com/topic/artificial-intelligence/",True),
-        ("The Register – AI","https://www.theregister.com/Tag/AI/",True),
-        ("InfoWorld – AI","https://www.infoworld.com/artificial-intelligence/",True),
-        ("eWeek – AI","https://www.eweek.com/artificial-intelligence/",True),
-        ("Engadget – AI","https://www.engadget.com/tag/ai/",True),
-        ("Tom’s Hardware – AI","https://www.tomshardware.com/t/ai/",True),
-        ("SiliconANGLE – AI","https://siliconangle.com/tag/ai/",True),
-        ("The Next Platform – AI/HPC","https://www.nextplatform.com/category/machine-learning/",True),
-        ("DatacenterDynamics – AI","https://www.datacenterdynamics.com/en/ai/",True),
-        ("HPCwire – AI","https://www.hpcwire.com/tag/ai/",True),
-        ("ServeTheHome – AI","https://www.servethehome.com/tag/ai/",True),
+        ("VentureBeat - AI","https://venturebeat.com/category/ai/",True),
+        ("TechCrunch - AI","https://techcrunch.com/category/artificial-intelligence/",True),
+        ("The Verge - AI","https://www.theverge.com/ai-artificial-intelligence",True),
+        ("ZDNet - AI","https://www.zdnet.com/topic/artificial-intelligence/",True),
+        ("The Register - AI","https://www.theregister.com/Tag/AI/",True),
+        ("InfoWorld - AI","https://www.infoworld.com/artificial-intelligence/",True),
+        ("eWeek - AI","https://www.eweek.com/artificial-intelligence/",True),
+        ("Engadget - AI","https://www.engadget.com/tag/ai/",True),
+        ("Tom's Hardware - AI","https://www.tomshardware.com/t/ai/",True),
+        ("SiliconANGLE - AI","https://siliconangle.com/tag/ai/",True),
+        ("The Next Platform - AI/HPC","https://www.nextplatform.com/category/machine-learning/",True),
+        ("DatacenterDynamics - AI","https://www.datacenterdynamics.com/en/ai/",True),
+        ("HPCwire - AI","https://www.hpcwire.com/tag/ai/",True),
+        ("ServeTheHome - AI","https://www.servethehome.com/tag/ai/",True),
         ("AI News (industry)","https://www.artificialintelligence-news.com/",True),
         ("AI Business","https://aibusiness.com/",True),
         ("DailyAI","https://dailyai.com/",True),
@@ -664,7 +782,7 @@ if __name__ == "__main__":
         ("OpenAI Blog","https://openai.com/blog",True),
         ("Google AI Blog","https://ai.googleblog.com/",True),
         ("Microsoft Blog","https://blogs.microsoft.com/",True),
-        ("AWS – AI Blog","https://aws.amazon.com/blogs/aws/category/artificial-intelligence/",True),
+        ("AWS - AI Blog","https://aws.amazon.com/blogs/aws/category/artificial-intelligence/",True),
         ("NVIDIA News/Blog","https://blogs.nvidia.com/",True),
         ("IBM Research Blog","https://research.ibm.com/blog",True),
     ]
