@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-from flask import Flask, request, jsonify, render_template, send_from_directory
+from flask import Flask, request, jsonify, render_template
 import os, json, tldextract
 
 OVERRIDES_FILE = 'overrides.json'
 BANNED_DOMAINS_FILE = 'banned_domains.json'
 CUSTOM_FEEDS_FILE = 'custom_feeds.json'
 CURATED_DATA_FILE = 'curated_items.json'
+ADMIN_CONFIG_FILE = 'admin_config.json'  # NEW
 
 ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD', 'admin')
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
+
+DEFAULT_CONFIG = {"disable_mirror": False, "disable_overrides": False, "disable_custom_feeds": False}
 
 def ensure_files():
     if not os.path.exists(OVERRIDES_FILE):
@@ -21,6 +24,8 @@ def ensure_files():
         with open(CUSTOM_FEEDS_FILE, 'w', encoding='utf-8') as f: json.dump([], f)
     if not os.path.exists(CURATED_DATA_FILE):
         with open(CURATED_DATA_FILE, 'w', encoding='utf-8') as f: json.dump({'items': []}, f)
+    if not os.path.exists(ADMIN_CONFIG_FILE):  # NEW
+        with open(ADMIN_CONFIG_FILE, 'w', encoding='utf-8') as f: json.dump(DEFAULT_CONFIG, f)
 
 def auth_ok(req):
     return req.headers.get('X-Admin-Key') == ADMIN_PASSWORD
@@ -41,22 +46,33 @@ def admin_page():
 @app.route('/api/state', methods=['GET'])
 def api_state():
     ensure_files()
-    items = load_json(CURATED_DATA_FILE, {'items': []}).get('items', [])
+    items     = load_json(CURATED_DATA_FILE, {'items': []}).get('items', [])
     overrides = load_json(OVERRIDES_FILE, {'overrides': {}}).get('overrides', {})
-    banned = load_json(BANNED_DOMAINS_FILE, [])
-    feeds = load_json(CUSTOM_FEEDS_FILE, [])
-    return jsonify({'items': items, 'overrides': overrides, 'banned_domains': banned, 'custom_feeds': feeds})
+    banned    = load_json(BANNED_DOMAINS_FILE, [])
+    feeds     = load_json(CUSTOM_FEEDS_FILE, [])
+    config    = load_json(ADMIN_CONFIG_FILE, DEFAULT_CONFIG)  # NEW
+    return jsonify({'items': items, 'overrides': overrides, 'banned_domains': banned, 'custom_feeds': feeds, 'config': config})
+
+@app.route('/api/config', methods=['POST'])  # NEW
+def api_config():
+    if not auth_ok(request): return jsonify({'error':'unauthorized'}), 401
+    payload = request.get_json(force=True) or {}
+    config = load_json(ADMIN_CONFIG_FILE, DEFAULT_CONFIG)
+    for k in ('disable_mirror','disable_overrides','disable_custom_feeds'):
+        if k in payload:
+            config[k] = bool(payload[k])
+    save_json(ADMIN_CONFIG_FILE, config)
+    return jsonify({'ok': True, 'config': config})
 
 @app.route('/api/override', methods=['POST'])
 def api_override():
     if not auth_ok(request): return jsonify({'error':'unauthorized'}), 401
     payload = request.get_json(force=True)
-    key = (payload or {}).get('key')  # key = current URL on page
+    key = (payload or {}).get('key')
     if not key: return jsonify({'error':'missing key'}), 400
     ov = {k:v for k,v in payload.items() if k in ('headline','url','image_url') and v is not None}
     data = load_json(OVERRIDES_FILE, {'overrides': {}})
     data.setdefault('overrides', {})
-    # merge/replace fields
     existing = data['overrides'].get(key, {})
     existing.update(ov)
     data['overrides'][key] = existing
