@@ -15,11 +15,13 @@
     th, td { border-bottom: 1px solid #e5e5e5; padding: 8px; vertical-align: top; }
     th { text-align: left; background:#fafafa; }
     .small { font-size: 12px; color:#666; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    @media (max-width: 900px){ .grid { grid-template-columns: 1fr; } }
+    .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+    @media (max-width: 1100px){ .grid { grid-template-columns: 1fr; } }
     .card { border:1px solid #ddd; border-radius:8px; padding:12px; }
     .row-controls { display:flex; gap:8px; flex-wrap: wrap; }
     .mono { font-family: ui-monospace, Menlo, Consolas, monospace; }
+    .switch { display:flex; align-items:center; gap:10px; margin:8px 0; }
+    .switch input { transform: scale(1.2); }
   </style>
 </head>
 <body>
@@ -37,15 +39,30 @@
       <div id="items-status" class="small"></div>
       <table id="items">
         <thead>
-          <tr>
-            <th>Headline</th><th>Source URL</th><th>Image URL</th><th>Actions</th>
-          </tr>
+          <tr><th>Headline</th><th>Source URL</th><th>Image URL</th><th>Actions</th></tr>
         </thead>
         <tbody></tbody>
       </table>
     </div>
 
     <div class="card">
+      <h2>Emergency Shutoff</h2>
+      <div class="small">Flip a switch, then re-run <b>curation.py</b>.</div>
+      <div class="switch">
+        <input id="disable_mirror" type="checkbox">
+        <label for="disable_mirror">Disable free-mirror lookup</label>
+      </div>
+      <div class="switch">
+        <input id="disable_overrides" type="checkbox">
+        <label for="disable_overrides">Disable admin overrides</label>
+      </div>
+      <div class="switch">
+        <input id="disable_custom_feeds" type="checkbox">
+        <label for="disable_custom_feeds">Disable custom feeds</label>
+      </div>
+      <button onclick="saveConfig()">Save Toggles</button>
+
+      <hr>
       <h2>Never List (ban domains)</h2>
       <div class="row-controls">
         <input id="ban-domain" type="text" placeholder="example.com">
@@ -68,9 +85,8 @@ let ADMIN_KEY = localStorage.getItem('x_admin_key') || '';
 
 function savePw() {
   const val = document.getElementById('pw').value.trim();
-  if(!val) { alert('Enter a password.'); return; }
-  ADMIN_KEY = val;
-  localStorage.setItem('x_admin_key', ADMIN_KEY);
+  if(!val){ alert('Enter a password.'); return; }
+  ADMIN_KEY = val; localStorage.setItem('x_admin_key', ADMIN_KEY);
   alert('Saved.');
 }
 
@@ -94,34 +110,47 @@ async function loadState() {
   renderItems(data.items || []);
   renderBanned(data.banned_domains || []);
   renderFeeds(data.custom_feeds || []);
+  applyConfig(data.config || {});
   document.getElementById('items-status').textContent = `${(data.items||[]).length} items (from curated_items.json)`;
 }
 
+function applyConfig(cfg){
+  document.getElementById('disable_mirror').checked = !!cfg.disable_mirror;
+  document.getElementById('disable_overrides').checked = !!cfg.disable_overrides;
+  document.getElementById('disable_custom_feeds').checked = !!cfg.disable_custom_feeds;
+}
+
+async function saveConfig(){
+  const payload = {
+    disable_mirror: document.getElementById('disable_mirror').checked,
+    disable_overrides: document.getElementById('disable_overrides').checked,
+    disable_custom_feeds: document.getElementById('disable_custom_feeds').checked,
+  };
+  await api('/api/config', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify(payload)
+  });
+  alert('Saved. Re-run curation.py to apply.');
+}
+
 function renderItems(items) {
-  const tb = document.querySelector('#items tbody');
-  tb.innerHTML = '';
+  const tb = document.querySelector('#items tbody'); tb.innerHTML = '';
   items.forEach(item => {
     const tr = el('tr');
     const headline = el('input', {type:'text', value:item.headline || ''});
     const url = el('input', {type:'url', value:item.url || ''});
     const img = el('input', {type:'url', value:item.image_url || ''});
     const saveBtn = el('button', {onclick: async ()=> {
-      await api('/api/override', {
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({ key: item.url, headline: headline.value, url: url.value, image_url: img.value })
-      });
+      await api('/api/override', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ key: item.url, headline: headline.value, url: url.value, image_url: img.value }) });
       alert('Saved override. Re-run curation.py to publish.');
     }}, ['Save']);
     const removeBtn = el('button', {onclick: async ()=> {
-      await api('/api/override/delete', {
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({ key: item.url })
-      });
+      await api('/api/override/delete', { method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ key: item.url }) });
       alert('Removed override (if existed). Re-run curation.py.');
     }}, ['Remove Override']);
-
     tr.appendChild(el('td', {}, [headline]));
     tr.appendChild(el('td', {}, [url]));
     tr.appendChild(el('td', {}, [img]));
@@ -134,14 +163,10 @@ function renderBanned(list) {
   const ul = document.getElementById('banned-list'); ul.innerHTML = '';
   list.forEach(dom => {
     const li = el('li', {}, [
-      el('span', {className:'mono'}, [dom]),
-      el('span', {}, [' ']),
+      el('span', {className:'mono'}, [dom]), el('span', {}, [' ']),
       el('button', {onclick: async ()=>{
-        await api('/api/remove-domain', {
-          method:'POST',
-          headers:{'Content-Type':'application/json'},
-          body: JSON.stringify({ domain: dom })
-        });
+        await api('/api/remove-domain', { method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ domain: dom }) });
         loadState();
       }}, ['Remove'])
     ]);
@@ -153,14 +178,10 @@ function renderFeeds(list) {
   const ul = document.getElementById('feeds-list'); ul.innerHTML = '';
   list.forEach(u => {
     const li = el('li', {}, [
-      el('a', {href:u, target:'_blank'}, [u]),
-      el('span', {}, [' ']),
+      el('a', {href:u, target:'_blank'}, [u]), el('span', {}, [' ']),
       el('button', {onclick: async ()=>{
-        await api('/api/remove-feed', {
-          method:'POST',
-          headers:{'Content-Type':'application/json'},
-          body: JSON.stringify({ feed_url: u })
-        });
+        await api('/api/remove-feed', { method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ feed_url: u }) });
         loadState();
       }}, ['Remove'])
     ]);
@@ -170,7 +191,7 @@ function renderFeeds(list) {
 
 loadState().catch(err => {
   console.error(err);
-  alert('Failed to load state. Make sure curated_items.json exists (run curation.py once).');
+  alert('Failed to load state. Run curation.py once so curated_items.json exists.');
 });
 </script>
 </body>
