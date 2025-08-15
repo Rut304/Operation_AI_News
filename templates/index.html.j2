@@ -8,290 +8,329 @@
     <title>Exhaustive AI</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5QVFJX51QK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-5QVFJX51QK');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QVFJX51QK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5QVFJX51QK');
+    </script>
 
-<!-- Add JSON-LD schema here -->
-{% if main_headline %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "{{ main_headline.headline }}",
-  "image": "{{ main_headline.related_image_url or 'https://via.placeholder.com/600x300?text=AI+Headline+Image' }}",
-  "datePublished": "{{ main_headline.published }}",
-  "author": {
-    "@type": "Organization",
-    "name": "Exhaustive AI"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Exhaustive AI",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://raw.githubusercontent.com/Rut304/Operation_AI_News/d058fd91cc84d63a2c40991bb05955b960c23818/image%20(4).jpg"
+    <!-- JSON-LD for the top story -->
+    {% if main_headline %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "{{ main_headline.headline }}",
+      "image": "{{ main_headline.related_image_url or 'https://via.placeholder.com/600x300?text=AI+Headline+Image' }}",
+      "datePublished": "{{ main_headline.published }}",
+      "author": { "@type": "Organization", "name": "Exhaustive AI" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Exhaustive AI",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://raw.githubusercontent.com/Rut304/Operation_AI_News/d058fd91cc84d63a2c40991bb05955b960c23818/image%20(4).jpg"
+        }
+      }
     }
-  }
-}
-</script>
-{% endif %}
+    </script>
+    {% endif %}
 
-<!-- Load Roboto font -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-<style>
-    :root {
-        --bg-color: #121212; /* Dark gray background default */
-        --text-color: #e0e0e0; /* Light gray text */
-        --link-color: #e0e0e0; /* Light grey links */
-        --hover-color: #ffffff; /* White on hover */
-        --border-color: #333; /* Dark borders */
-        --headline-color: #e0e0e0; /* Light grey headlines */
-        --source-color: #999999; /* Grey for source text */
-        --title-color: #eca213; /* Warm gold-orange for title */
-    }
-    
-    /* Light mode override */
-    @media (prefers-color-scheme: light) {
+    <style>
         :root {
-            --bg-color: #fff;
-            --text-color: #000;
-            --link-color: #000;
-            --hover-color: #0000ff;
-            --border-color: #ccc;
-            --headline-color: #333; /* Dark grey in light mode */
-            --source-color: #666; /* Darker grey for sources in light mode */
-            --title-color: #eca213; /* Keep warm gold-orange */
-        }
-    }
-    
-    body {
-        font-family: 'Roboto', sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        margin: 0;
-        padding: 20px;
-        line-height: 1.6;
-    }
-    
-    header {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    
-    .logo {
-        max-width: 200px;
-        height: auto;
-    }
-    
-    h1 {
-        color: var(--title-color);
-        font-size: 5em; /* Even larger for title */
-        text-align: center; /* Ensure centered */
-    }
-    
-    .main-article {
-        text-align: center; /* Center the top headline section */
-        margin-bottom: 60px; /* Increased space between main headline and columns */
-    }
-    
-    .main-headline {
-        font-size: 4em; /* Even larger for top headline */
-        color: var(--headline-color);
-        text-decoration: underline;
-        margin-bottom: 10px;
-    }
-    
-    .headline {
-        font-size: 1.4em;
-        color: var(--headline-color);
-        text-decoration: underline;
-        margin-bottom: 10px; /* Increased for better spacing */
-        display: block; /* Ensures full line */
-    }
-    
-    .source {
-        font-style: italic;
-        font-size: 0.9em;
-        color: var(--source-color);
-        margin-bottom: 15px; /* Added for separation */
-        display: block;
-    }
-    
-    a {
-        color: var(--link-color);
-        text-decoration: none;
-    }
-    
-    a:hover {
-        color: var(--hover-color);
-    }
-    
-    .columns {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .column {
-        width: 30%;
-        padding: 10px;
-        border-right: 1px solid var(--border-color);
-    }
-    
-    .column:last-child {
-        border-right: none;
-    }
-    
-    img {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 15px; /* Increased */
-    }
-    
-    .article-item {
-        margin-bottom: 20px; /* Wrapper for each article to prevent scrunching */
-    }
-    
-    footer {
-        text-align: center;
-        margin-top: 40px;
-        font-size: 0.8em;
-        color: var(--source-color);
-    }
-    
-    footer ul {
-        list-style-type: none; /* Remove bullets for clean look */
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px; /* Space between items */
-    }
-    
-    footer li {
-        flex-basis: 20%; /* Approximate for 5 columns on wide screens */
-        min-width: 150px; /* Prevent too narrow */
-    }
-    
-    footer a {
-        color: var(--link-color);
-        text-decoration: underline;
-    }
-    
-    /* New: Define random styles for variety (Drudge-like flair) */
-    .style1 {
-        font-weight: bold;
-        text-transform: none; /* No uppercase */
-        color: var(--headline-color); /* Same light grey */
-    }
-    .style2 {
-        font-style: italic;
-        color: var(--headline-color); /* Same light grey */
-    }
-    .style3 {
-        font-weight: bold;
-        font-size: 1.5em; /* Slightly larger */
-        color: var(--headline-color); /* Same light grey */
-    }
-    .style4 {
-        color: var(--headline-color); /* Same light grey */
-    }
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --link-color: #e0e0e0;
+            --hover-color: #ffffff;
+            --border-color: #333;
+            --headline-color: #e0e0e0;
+            --source-color: #999999;
+            --title-color: #eca213;
 
-    /* Mobile responsiveness */
-    @media (max-width: 768px) {
-        .columns {
-            flex-direction: column; /* Stack columns vertically on mobile */
+            /* Card tones */
+            --card-bg: #161616;
+            --card-border: #2a2a2a;
+            --card-shadow: 0 1px 0 rgba(0,0,0,0.25);
+            --card-shadow-hover: 0 6px 20px rgba(0,0,0,0.25);
         }
-        
-        .column {
-            width: 100%; /* Full width on mobile */
-            border-right: none; /* Remove borders */
-            border-bottom: 1px solid var(--border-color); /* Optional separator */
-            padding: 10px 0;
+
+        /* Light mode */
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #fff;
+                --text-color: #000;
+                --link-color: #000;
+                --hover-color: #0000ff;
+                --border-color: #ccc;
+                --headline-color: #333;
+                --source-color: #666;
+                --title-color: #eca213;
+
+                --card-bg: #fff;
+                --card-border: #e6e6e6;
+                --card-shadow: 0 1px 0 rgba(0,0,0,0.06);
+                --card-shadow-hover: 0 8px 24px rgba(0,0,0,0.08);
+            }
         }
-        
-        .column:last-child {
-            border-bottom: none;
+
+        /* Base */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
         }
-        
+
+        header { text-align: center; margin-bottom: 28px; }
+        .logo { max-width: 200px; height: auto; }
+
         h1 {
-            font-size: 2.5em; /* Reduced title on mobile */
+            color: var(--title-color);
+            font-size: 3.6em;
+            text-align: center;
+            margin: 0 0 6px 0;
         }
-        
+
+        /* Top (main) story as a larger card */
+        .main-article {
+            max-width: 980px;
+            margin: 0 auto 36px auto;
+        }
+        .main-card {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            background: var(--card-bg);
+            box-shadow: var(--card-shadow);
+            padding: 16px;
+            transition: box-shadow .15s ease, transform .05s ease;
+            text-align: left;
+        }
+        .main-card:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-1px); }
+
         .main-headline {
-            font-size: 2em; /* Reduced main headline on mobile, but larger than column headlines */
+            font-size: 2.2em;
+            color: var(--headline-color);
+            margin: 0;
+            text-decoration: none;
+            font-weight: 800;
+            line-height: 1.15;
         }
-        
-        .headline {
-            font-size: 1.1em; /* Smaller headlines on mobile */
+        .main-headline a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; }
+
+        .meta {
+            color: var(--source-color);
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        
-        footer ul {
-            flex-direction: column; /* Stack footer list on mobile */
+        .meta .dot { opacity: .5; }
+
+        .main-image {
+            width: 100%;
+            max-height: 340px;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #0d0d0d;
+        }
+        .main-image img { width: 100%; height: auto; display: block; object-fit: cover; }
+
+        /* Columns */
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        @media (min-width: 992px) {
+            .columns {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 18px;
+            }
+        }
+
+        .column { display: grid; gap: 12px; }
+
+        /* Headline cards (WSJ-style boxes) */
+        .headline-card {
+            display: grid;
+            grid-template-columns: 1fr;
             gap: 10px;
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 12px;
+            background: var(--card-bg);
+            box-shadow: var(--card-shadow);
+            transition: box-shadow .15s ease, transform .05s ease;
         }
-        
-        footer li {
-            flex-basis: auto;
-            min-width: auto;
+        .headline-card:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-1px); }
+
+        /* Optional thumbnails (kept small to preserve thin cards) */
+        .thumb {
+            display: block;
+            width: 100%;
+            max-height: 140px;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #0d0d0d;
         }
-    }
-</style></head>
+        .thumb img { width: 100%; height: auto; display: block; object-fit: cover; }
+
+        .headline {
+            font-size: 1.1em;
+            color: var(--headline-color);
+            margin: 0;
+            font-weight: 800;
+            line-height: 1.25;
+        }
+        .headline a { color: inherit; text-decoration: underline; text-underline-offset: 1px; }
+
+        .source {
+            font-style: italic;
+            font-size: 0.9em;
+            color: var(--source-color);
+        }
+
+        /* Your existing random styles still apply */
+        .style1 { font-weight: bold; color: var(--headline-color); }
+        .style2 { font-style: italic; color: var(--headline-color); }
+        .style3 { font-weight: bold; font-size: 1.2em; color: var(--headline-color); }
+        .style4 { color: var(--headline-color); }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: var(--source-color);
+        }
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        footer li { flex-basis: 20%; min-width: 150px; }
+        footer a { color: var(--link-color); text-decoration: underline; }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.4em; }
+            .main-headline { font-size: 1.6em; }
+            .headline { font-size: 1em; }
+            .main-image { max-height: 260px; }
+        }
+    </style>
+</head>
 <body>
-    <header>
-        <h1>Exhaustive AI</h1>
-    </header>
-    
+<header>
+    <h1>Exhaustive AI</h1>
+</header>
+
 {% if main_headline %}
 <section class="main-article">
-    <a href="{{ main_headline.url }}" class="main-headline {{ main_headline.style }}" target="_blank" rel="noopener noreferrer">{{ main_headline.headline }}{% if main_headline.score > 15 %} {% endif %}</a>
-    <span class="source">({{ main_headline.source }})</span>
-    {% if main_headline.image_url %}
-    <img src="{{ main_headline.image_url }}" alt="Main article image for {{ main_headline.headline }}">
-    {% endif %}
+    <article class="main-card">
+        <h2 class="main-headline {{ main_headline.style }}">
+            <a href="{{ main_headline.url }}" target="_blank" rel="noopener noreferrer">
+                {{ main_headline.headline }}
+            </a>
+        </h2>
+        <div class="meta">
+            <span class="source">{{ main_headline.source }}</span>
+            <span class="dot">•</span>
+            <time datetime="{{ main_headline.published }}">{{ main_headline.published[:10] }}</time>
+        </div>
+        {% if main_headline.image_url %}
+        <a class="main-image" href="{{ main_headline.url }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ main_headline.image_url }}" alt="Main article image for {{ main_headline.headline }}">
+        </a>
+        {% endif %}
+    </article>
 </section>
 {% endif %}
 
 <div class="columns">
+    <!-- Column 1 -->
     <div class="column">
         {% for item in column1 %}
-        <div class="article-item">
-            <a href="{{ item.url }}" class="headline {{ item.style }}" target="_blank" rel="noopener noreferrer">{{ item.headline }}{% if item.score > 15 %} {% endif %}</a>
-            <span class="source">({{ item.source }})</span>
-            {% if item.image_url %}
-            <img src="{{ item.image_url }}" alt="Article image for {{ item.headline }}">
+        {% set show_image = (loop.index % 2 == 0) and item.image_url %}
+        <article class="headline-card">
+            {% if show_image %}
+            <a href="{{ item.url }}" class="thumb" target="_blank" rel="noopener">
+                <img src="{{ item.image_url }}" alt="Article image for {{ item.headline }}">
+            </a>
             {% endif %}
-        </div>
+            <h3 class="headline {{ item.style }}">
+                <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+                    {{ item.headline }}
+                </a>
+            </h3>
+            <div class="meta">
+                <span class="source">{{ item.source }}</span>
+                <span class="dot">•</span>
+                <time datetime="{{ item.published }}">{{ item.published[:10] }}</time>
+            </div>
+        </article>
         {% endfor %}
     </div>
-    
+
+    <!-- Column 2 -->
     <div class="column">
         {% for item in column2 %}
-        <div class="article-item">
-            <a href="{{ item.url }}" class="headline {{ item.style }}" target="_blank" rel="noopener noreferrer">{{ item.headline }}{% if item.score > 15 %} {% endif %}</a>
-            <span class="source">({{ item.source }})</span>
-            {% if item.image_url %}
-            <img src="{{ item.image_url }}" alt="Article image for {{ item.headline }}">
+        {% set show_image = (loop.index % 2 == 0) and item.image_url %}
+        <article class="headline-card">
+            {% if show_image %}
+            <a href="{{ item.url }}" class="thumb" target="_blank" rel="noopener">
+                <img src="{{ item.image_url }}" alt="Article image for {{ item.headline }}">
+            </a>
             {% endif %}
-        </div>
+            <h3 class="headline {{ item.style }}">
+                <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+                    {{ item.headline }}
+                </a>
+            </h3>
+            <div class="meta">
+                <span class="source">{{ item.source }}</span>
+                <span class="dot">•</span>
+                <time datetime="{{ item.published }}">{{ item.published[:10] }}</time>
+            </div>
+        </article>
         {% endfor %}
     </div>
-    
+
+    <!-- Column 3 -->
     <div class="column">
         {% for item in column3 %}
-        <div class="article-item">
-            <a href="{{ item.url }}" class="headline {{ item.style }}" target="_blank" rel="noopener noreferrer">{{ item.headline }}{% if item.score > 15 %} {% endif %}</a>
-            <span class="source">({{ item.source }})</span>
-            {% if item.image_url %}
-            <img src="{{ item.image_url }}" alt="Article image for {{ item.headline }}">
+        {% set show_image = (loop.index % 2 == 0) and item.image_url %}
+        <article class="headline-card">
+            {% if show_image %}
+            <a href="{{ item.url }}" class="thumb" target="_blank" rel="noopener">
+                <img src="{{ item.image_url }}" alt="Article image for {{ item.headline }}">
+            </a>
             {% endif %}
-        </div>
+            <h3 class="headline {{ item.style }}">
+                <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+                    {{ item.headline }}
+                </a>
+            </h3>
+            <div class="meta">
+                <span class="source">{{ item.source }}</span>
+                <span class="dot">•</span>
+                <time datetime="{{ item.published }}">{{ item.published[:10] }}</time>
+            </div>
+        </article>
         {% endfor %}
     </div>
 </div>
@@ -326,5 +365,6 @@
         <li><a href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer">Perplexity AI</a></li>
         <li><a href="https://www.artificialintelligence-news.com" target="_blank" rel="noopener noreferrer">Artificial Intelligence News</a></li>
     </ul>
-</footer></body>
+</footer>
+</body>
 </html>
