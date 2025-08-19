@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daily AI news aggregated from top sources, featuring sensational headlines and breakthroughs in artificial intelligence.">
+    <meta name="keywords" content="AI news, artificial intelligence, AI report, machine learning, tech news">
+    <title>Exhaustive AI</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+   
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QVFJX51QK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5QVFJX51QK');
+    </script>
+    <!-- Enhanced JSON-LD schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsMediaOrganization",
+      "name": "Exhaustive AI",
+      "url": "https://www.exhaustiveai.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/Rut304/Operation_AI_News/d058fd91cc84d63a2c40991bb05955b960c23818/image%20(4).jpg"
+      },
+      "description": "Daily AI business news aggregator",
+      "article": [
+        {% if main_headline %}
+        {
+          "@type": "NewsArticle",
+          "headline": "{{ main_headline.headline }}",
+          "image": "{{ main_headline.image_url or main_headline.related_image_url or 'https://via.placeholder.com/600x300?text=AI+Headline+Image' }}",
+          "datePublished": "{{ main_headline.published }}",
+          "author": {
+            "@type": "Organization",
+            "name": "{{ main_headline.source }}"
+          }
+        },
+        {% endif %}
+        {% for item in column1 %}
+        {
+          "@type": "NewsArticle",
+          "headline": "{{ item.headline }}",
+          "url": "{{ item.url }}",
+          "datePublished": "{{ item.published }}",
+          "author": {
+            "@type": "Organization",
+            "name": "{{ item.source }}"
+          }
+        },
+        {% endfor %}
+        {% for item in column2 %}
+        {
+          "@type": "NewsArticle",
+          "headline": "{{ item.headline }}",
+          "url": "{{ item.url }}",
+          "datePublished": "{{ item.published }}",
+          "author": {
+            "@type": "Organization",
+            "name": "{{ item.source }}"
+          }
+        },
+        {% endfor %}
+        {% for item in column3 %}
+        {
+          "@type": "NewsArticle",
+          "headline": "{{ item.headline }}",
+          "url": "{{ item.url }}",
+          "datePublished": "{{ item.published }}",
+          "author": {
+            "@type": "Organization",
+            "name": "{{ item.source }}"
+          }
+        }
+        {% endfor %}
+      ]
+    }
+    </script>
+    <!-- Load Roboto font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #121212; /* Dark gray background default */
+            --text-color: #e0e0e0; /* Light gray text */
+            --link-color: #e0e0e0; /* Light grey links */
+            --hover-color: #ffffff; /* White on hover */
+            --border-color: #333; /* Dark borders */
+            --headline-color: #e0e0e0; /* Light grey headlines */
+            --source-color: #999999; /* Grey for source text */
+            --title-color: #eca213; /* Warm gold-orange for title */
+        }
+       
+        /* Light mode override */
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #fff;
+                --text-color: #000;
+                --link-color: #000;
+                --hover-color: #0000ff;
+                --border-color: #ccc;
+                --headline-color: #333; /* Dark grey in light mode */
+                --source-color: #666; /* Darker grey for sources in light mode */
+                --title-color: #eca213; /* Keep warm gold-orange */
+            }
+        }
+       
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+       
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+       
+        .logo {
+            max-width: 200px;
+            height: auto;
+        }
+       
+        h1 {
+            color: var(--title-color);
+            font-size: 5em; /* Even larger for title */
+            text-align: center; /* Ensure centered */
+        }
+       
+        .main-article {
+            text-align: center; /* Center the top headline section */
+            margin-bottom: 60px; /* Increased space between main headline and columns */
+        }
+       
+        .main-headline {
+            font-size: 4em; /* Even larger for top headline */
+            color: var(--headline-color);
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+       
+        .headline {
+            font-size: 1.4em;
+            color: var(--headline-color);
+            text-decoration: underline;
+            margin-bottom: 10px; /* Increased for better spacing */
+            display: block; /* Ensures full line */
+        }
+       
+        .source {
+            font-style: italic;
+            font-size: 0.9em;
+            color: var(--source-color);
+            margin-bottom: 15px; /* Added for separation */
+            display: block;
+        }
+       
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+       
+        a:hover {
+            color: var(--hover-color);
+        }
+       
+        .columns {
+            display: flex;
+            justify-content: space-between;
+        }
+       
+        .column {
+            width: 30%;
+            padding: 10px;
+            border-right: 1px solid var(--border-color);
+        }
+       
+        .column:last-child {
+            border-right: none;
+        }
+       
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px; /* Increased */
+        }
+       
+        .article-item {
+            margin-bottom: 20px; /* Wrapper for each article to prevent scrunching */
+        }
+       
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: var(--source-color);
+        }
+       
+        footer ul {
+            list-style-type: none; /* Remove bullets for clean look */
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Space between items */
+        }
+       
+        footer li {
+            flex-basis: 20%; /* Approximate for 5 columns on wide screens */
+            min-width: 150px; /* Prevent too narrow */
+        }
+       
+        footer a {
+            color: var(--link-color);
+            text-decoration: underline;
+        }
+       
+        /* New: Define random styles for variety (Drudge-like flair) */
+        .style1 {
+            font-weight: bold;
+            text-transform: none; /* No uppercase */
+            color: var(--headline-color); /* Same light grey */
+        }
+        .style2 {
+            font-style: italic;
+            color: var(--headline-color); /* Same light grey */
+        }
+        .style3 {
+            font-weight: bold;
+            font-size: 1.5em; /* Slightly larger */
+            color: var(--headline-color); /* Same light grey */
+        }
+        .style4 {
+            color: var(--headline-color); /* Same light grey */
+        }
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .columns {
+                flex-direction: column; /* Stack columns vertically on mobile */
+            }
+           
+            .column {
+                width: 100%; /* Full width on mobile */
+                border-right: none; /* Remove borders */
+                border-bottom: 1px solid var(--border-color); /* Optional separator */
+                padding: 10px 0;
+            }
+           
+            .column:last-child {
+                border-bottom: none;
+            }
+           
+            h1 {
+                font-size: 2.5em; /* Reduced title on mobile */
+            }
+           
+            .main-headline {
+                font-size: 2em; /* Reduced main headline on mobile, but larger than column headlines */
+            }
+           
+            .headline {
+                font-size: 1.1em; /* Smaller headlines on mobile */
+            }
+           
+            footer ul {
+                flex-direction: column; /* Stack footer list on mobile */
+                gap: 10px;
+            }
+           
+            footer li {
+                flex-basis: auto;
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exhaustive AI</h1>
+    </header>
+   
+    {% if main_headline %}
+    <section class="main-article">
+        <a href="{{ main_headline.url }}" class="main-headline {{ main_headline.style }}" target="_blank" rel="noopener noreferrer">{{ main_headline.headline }}{% if main_headline.score > 15 %} {% endif %}</a>
+        <span class="source">({{ main_headline.source }})</span>
+        {% if main_headline.image_url %}
+        <img src="{{ main_headline.image_url }}" alt="Main article image for {{ main_headline.headline }}">
+        {% endif %}
+    </section>
+    {% endif %}
+    <div class="columns">
+        <div class="column">
+            {% for item in column1 %}
+            <div class="article-item">
+                <a href="{{ item.url }}" class="headline {{ item.style }}" target="_blank" rel="noopener noreferrer">{{ item.headline }}{% if item.score > 15 %} {% endif %}</a>
+                <span class="source">({{ item.source }})</span>
+                {% if item.image_url %}
+                <img src="{{ item.image_url }}" alt="Article image for {{ item.headline }}">
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+       
+        <div class="column">
+            {% for item in column2 %}
+            <div class="article-item">
+                <a href="{{ item.url }}" class="headline {{ item.style }}" target="_blank" rel="noopener noreferrer">{{ item.headline }}{% if item.score > 15 %} {% endif %}</a>
+                <span class="source">({{ item.source }})</span>
+                {% if item.image_url %}
+                <img src="{{ item.image_url }}" alt="Article image for {{ item.headline }}">
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+       
+        <div class="column">
+            {% for item in column3 %}
+            <div class="article-item">
+                <a href="{{ item.url }}" class="headline {{ item.style }}" target="_blank" rel="noopener noreferrer">{{ item.headline }}{% if item.score > 15 %} {% endif %}</a>
+                <span class="source">({{ item.source }})</span>
+                {% if item.image_url %}
+                <img src="{{ item.image_url }}" alt="Article image for {{ item.headline }}">
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <footer>
+        &copy; {{ current_year }} Exhaustive AI. All rights reserved. <a href="mailto:ExhaustiveAI@gmail.com">Contact Us</a>
+        <h2>Top 25 AI Websites</h2>
+        <ul>
+            <li><a href="https://openai.com" target="_blank" rel="noopener noreferrer">OpenAI</a></li>
+            <li><a href="https://ai.google" target="_blank" rel="noopener noreferrer">Google AI</a></li>
+            <li><a href="https://www.microsoft.com/en-us/ai" target="_blank" rel="noopener noreferrer">Microsoft AI</a></li>
+            <li><a href="https://huggingface.co" target="_blank" rel="noopener noreferrer">Hugging Face</a></li>
+            <li><a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank" rel="noopener noreferrer">TechCrunch AI</a></li>
+            <li><a href="https://venturebeat.com/category/ai/" target="_blank" rel="noopener noreferrer">VentureBeat AI</a></li>
+            <li><a href="https://www.wired.com/tag/artificial-intelligence/" target="_blank" rel="noopener noreferrer">Wired AI</a></li>
+            <li><a href="https://www.technologyreview.com/topic/artificial-intelligence/" target="_blank" rel="noopener noreferrer">MIT Technology Review</a></li>
+            <li><a href="https://aimagazine.com" target="_blank" rel="noopener noreferrer">AI Magazine</a></li>
+            <li><a href="https://www.analyticsvidhya.com" target="_blank" rel="noopener noreferrer">Analytics Vidhya</a></li>
+            <li><a href="https://www.aitrends.com" target="_blank" rel="noopener noreferrer">AI Trends</a></li>
+            <li><a href="https://news.mit.edu/topic/artificial-intelligence2" target="_blank" rel="noopener noreferrer">MIT News AI</a></li>
+            <li><a href="https://www.dataversity.net" target="_blank" rel="noopener noreferrer">Dataversity</a></li>
+            <li><a href="https://emerj.com" target="_blank" rel="noopener noreferrer">Emerj</a></li>
+            <li><a href="https://www.kdnuggets.com" target="_blank" rel="noopener noreferrer">KDnuggets</a></li>
+            <li><a href="https://www.analyticsinsight.net" target="_blank" rel="noopener noreferrer">Analytics Insight</a></li>
+            <li><a href="https://insidebigdata.com" target="_blank" rel="noopener noreferrer">Inside Big Data</a></li>
+            <li><a href="https://www.datasciencecentral.com" target="_blank" rel="noopener noreferrer">Data Science Central</a></li>
+            <li><a href="https://developer.ibm.com" target="_blank" rel="noopener noreferrer">IBM Developer</a></li>
+            <li><a href="https://intelligence.org" target="_blank" rel="noopener noreferrer">Machine Intelligence Research Institute</a></li>
+            <li><a href="https://paperswithcode.com" target="_blank" rel="noopener noreferrer">Papers with Code</a></li>
+            <li><a href="https://www.anthropic.com" target="_blank" rel="noopener noreferrer">Anthropic</a></li>
+            <li><a href="https://stability.ai" target="_blank" rel="noopener noreferrer">Stability AI</a></li>
+            <li><a href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer">Perplexity AI</a></li>
+            <li><a href="https://www.artificialintelligence-news.com" target="_blank" rel="noopener noreferrer">Artificial Intelligence News</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
